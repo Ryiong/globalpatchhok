@@ -158,14 +158,67 @@ i.fa-solid.fa-xmark {
 
 .slider-box {
     position: relative;
-    padding: 25%;
+    padding: 25% 25% 31.3% 25%;;
     margin-top: 70px;
-    background: url('/assets/img/banner1.webp') top center / cover no-repeat;
+    background: url('/assets/img/banner1.jpg') top center / cover no-repeat;
+}
+.lobby-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.download-btn, .report-center-btn {
+    background-color: rgb(78 97 109 / 75%);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    font-size: 22px;
+    bottom: 23%;
+    left: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.download-btn {
+    transform: translate(-177%, 0);
+}
+.report-center-btn {
+    transform: translate(-27%, 0);
+}
+.light-move1, .light-move2 {
+    position: absolute;
+    left: -153px; top: -156px;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.8);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    filter: blur(32px);
+}
+.light-move1 {
+    -webkit-animation: lightmove1 2s ease-in infinite;
+    -o-animation: lightmove1 2s ease-in infinite;
+    animation: lightmove1 2s ease-in infinite;
+}
+.light-move2 {
+    -webkit-animation: lightmove2 2s ease-in infinite;
+    -o-animation: lightmove2 2s ease-in infinite;
+    animation: lightmove2 2s ease-in infinite;
+}
+.download-btn:hover, .report-center-btn:hover {
+    background-color: var(--comet);
+    transition: 0.5s ease-in-out;
+    box-shadow: 1px 1px 10px var(--black);
 }
 .slider-bar-down {
     background: url('/assets/img/down-bar.gif') no-repeat 100%/100%;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     width: 500px;
@@ -282,5 +335,13 @@ i.fa-solid.fa-xmark {
 @keyframes play-music {
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
+}
+@keyframes lightmove1 {
+    from {left: -153px; top: -156px; opacity: 0;}
+    to {left: 55px; top: 59px; opacity: 1;}
+}
+@keyframes lightmove2 {
+    from {left: -244px; top: -156px; opacity: 0;}
+    to {left: 328px; top: -8px; opacity: 1;}
 }
 
