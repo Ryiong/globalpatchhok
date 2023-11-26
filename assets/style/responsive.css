@@ -27,29 +27,27 @@
     .light-move1, .light-move2 {
         width: 600px;
     }
-    @keyframes lightmove1 {
-        from {left: -277px; top: -156px; opacity: 0;}
-        to {left: 574px; top: 59px; opacity: 1;}
-    }
-    @keyframes lightmove2 {
-        from {left: -244px; top: -156px; opacity: 0;}
-        to {left: 641px; top: 81px; opacity: 1;}
-    }
+    
 }
 @media screen and (max-width: 615px) {
     .footer-content {
         display: block;
+        padding-top: 5px;
     }
     .contact-info {
         margin-left: auto;
         width: 100%;
         margin-right: auto;
         text-align: center;
+        margin-top: 0;
     }
     .content-footer {
         display: block;
         text-align: center;
         width: 100%;
+    }
+    .content-footer>p {
+        margin: 0 30px;
     }
     .slider-btn {
         position: absolute;
@@ -81,6 +79,19 @@
     }
     .report-center-btn {
         display: none;
+    }
+    .containter, .center {
+        transform: translateY(0vh);
+    }
+    .center {
+        padding: 2vh 0;
+    }
+    .center-link {
+        width: 45%;
+        margin: 0 5px;
+    }
+    .containter {
+        padding-top: 2vh;
     }
 }
 @media screen and (min-width: 971px){

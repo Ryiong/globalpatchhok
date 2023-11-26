@@ -50,7 +50,7 @@ i.fa-solid.fa-up-right-from-square {
 
 /* Base */
 .full-web {
-
+    background-color: #f0f2f5;
 }
 
 .header-box {
@@ -84,7 +84,7 @@ i.fa-solid.fa-up-right-from-square {
 .menu-top {
     display: flex;
     line-height: 70px;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
 }
 .menu-top>li {
@@ -126,7 +126,7 @@ i.fa-solid.fa-up-right-from-square {
 }
 
 .mobile-menu {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 70px;
     font-weight: 700;
     width: 100%;
@@ -144,6 +144,7 @@ i.fa-solid.fa-up-right-from-square {
 .icon-menu-mobile {
     float: right;
     padding: 0 30px;
+    font-size: 25px;
 }
 .full-menu-mobile {
     margin-top: 71px;
@@ -158,9 +159,9 @@ i.fa-solid.fa-xmark {
 
 .slider-box {
     position: relative;
-    padding: 25% 25% 31.3% 25%;;
+    padding: 18.75%;
     margin-top: 70px;
-    background: url('/assets/img/banner1.jpg') top center / cover no-repeat;
+    background: url('https://vgvdpatchglobal.files.wordpress.com/2023/11/banner1-1.png') top center / cover no-repeat;
 }
 .lobby-video {
     position: absolute;
@@ -168,57 +169,18 @@ i.fa-solid.fa-xmark {
     left: 0;
     width: 100%;
 }
-.download-btn, .report-center-btn {
-    background-color: rgb(78 97 109 / 75%);
-    color: var(--white);
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 15px;
+.main-btn {
+    display: flex;
     position: absolute;
-    font-size: 22px;
     bottom: 23%;
     left: 50%;
-    overflow: hidden;
-    cursor: pointer;
+    transform: translate(-50%, 0);
 }
-.download-btn {
-    transform: translate(-177%, 0);
-}
-.report-center-btn {
-    transform: translate(-27%, 0);
-}
-.light-move1, .light-move2 {
-    position: absolute;
-    left: -153px; top: -156px;
-    width: 300px;
-    height: 50px;
-    background-color: rgba(255,255,255,0.8);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    filter: blur(32px);
-}
-.light-move1 {
-    -webkit-animation: lightmove1 2s ease-in infinite;
-    -o-animation: lightmove1 2s ease-in infinite;
-    animation: lightmove1 2s ease-in infinite;
-}
-.light-move2 {
-    -webkit-animation: lightmove2 2s ease-in infinite;
-    -o-animation: lightmove2 2s ease-in infinite;
-    animation: lightmove2 2s ease-in infinite;
-}
-.download-btn:hover, .report-center-btn:hover {
-    background-color: var(--comet);
-    transition: 0.5s ease-in-out;
-    box-shadow: 1px 1px 10px var(--black);
-}
+
 .slider-bar-down {
-    background: url('/assets/img/down-bar.gif') no-repeat 100%/100%;
+    background: url('https://vgvdpatchglobal.files.wordpress.com/2023/11/down-bar.gif') no-repeat 100%/100%;
     position: absolute;
-    bottom: 15%;
+    bottom: 13%;
     left: 50%;
     transform: translateX(-50%);
     width: 500px;
@@ -237,7 +199,7 @@ i.fa-solid.fa-xmark {
     right: 30px;
 }
 .continute-play-music, .stop-play-music {
-    background: url('https://cloud1.email2go.io/520115043d9ba527a787577bd75930c8/9263b91c68028a7b1f6ce8863d3db26041fb374756fdc1d5ab17791278a1e10d.png') no-repeat;
+    background: url('https://vgvdpatchglobal.files.wordpress.com/2023/11/item-img.png') no-repeat;
     height: 60px;
     background-size: 915%;
 }
@@ -251,7 +213,7 @@ i.fa-solid.fa-xmark {
     filter: brightness(0.85);
 }
 .music-play-animation {
-    background: url('/assets/img/musicplay.gif') no-repeat center;
+    background: url('https://vgvdpatchglobal.files.wordpress.com/2023/11/musicplay.gif') no-repeat center;
     background-size: 100%;
     position: absolute;
     width: 60px;
@@ -260,8 +222,30 @@ i.fa-solid.fa-xmark {
     right: 30px;
     z-index: 100;
 }
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(-6vh);
+    width: 100%;
+    justify-content: center;
+}
+.center-link {
+    width: 23%;
+    margin: 0 5px;
+}
+.img-center {
+    width: 100%;
+    transition: .5s ease;
+    filter: brightness(1.0) drop-shadow(0px 4px 5px gray);
+}
+.center-link:hover > .img-center {
+    transform: scale(1.05);
+    filter: brightness(1.25) drop-shadow(0px 4px 5px gray);;
+}
+
 .containter {
     background-color: #f0f2f5;
+    transform: translateY(-2vh);
 }
 
 .body-content {
@@ -270,23 +254,23 @@ i.fa-solid.fa-xmark {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    padding: 10vh 0;
+    padding-bottom: 3vh;
 }
 
+.side-bar,
 .main-content {
     background-color: var(--white);
     height: 500px;
+    box-shadow: 0px 0px 20px #ccc;
+}
+.main-content {
     width: 78%;
-    margin-right: 30px;
-    box-shadow: 0px 0px 20px var(--aluminium);
+    margin-right: 15px;
 }
 
 .side-bar {
-    background-color: var(--white);
     width: 22%;
-    height: 500px;
-    margin-left: 30px;
-    box-shadow: 0px 0px 20px var(--aluminium);
+    margin-left: 15px;
 }
 
 .footer-box {
