@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style/normalize.css">
+  <link rel="stylesheet" href="/assets/style/base.css">
+  <link rel="stylesheet" href="/assets/style/main.css">
+  <link rel="stylesheet" href="/assets/style/animation.css">
+  <link rel="stylesheet" href="/assets/style/responsive.css">
+  <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header-box">
+    <div class="logo-page">
+      <a href="" class="link-page">
+        <img src="./assets/img/Honor_of_Kings_Logo.webp" alt="" class="logo-page-img">
+      </a>
+    </div>
+    <div class="menu-page">
+      <div class="menu-lag">
+        <ul class="big-menu">
+          <li><a href="" class="link-menu">thông tin<i class="fa-solid fa-chevron-down"></i></a>
+            <div class="sub-nav">
+              <ul class="sub-nav-inner">
+                <li class="down-nav">
+                  <a href="" target="_blank" title="">cài đặt<i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="" target="_blank" title="">hệ thống anh hùng<i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="" target="_blank" title="">lược đồ trang bị<i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="" target="_blank" title="">túi ngọc<i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="" target="_blank" title="">bảng bổ trợ<i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="" target="_blank" title="">hạp cốc vương giả<i class="fa-solid fa-up-right-from-square"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="" class="link-menu">esports<i class="fa-solid fa-up-right-from-square"></i></a></li>
+          <li><a href="" class="link-menu">trạm quan sát<i class="fa-solid fa-up-right-from-square"></i></a></li>
+          <li><a href="" class="link-menu">khám phá<i class="fa-solid fa-up-right-from-square"></i></a></li>
+          <li><a href="" class="link-menu">tải xuống</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu">
+        <a href="#" onclick="displayMenu()" id="open-menu" class="icon-mobile link-menu"><i class="fa-solid fa-bars"></i></a>
+        <a href="#" onclick="hideMenu()" id="close-menu" class="icon-mobile link-menu hide"><i class="fa-solid fa-xmark"></i></a>
+        <div class="mobile-down-nav">
+          <a href="">hạp cốc vương giả</a>
+          <a href="">hệ thống anh hùng</a>
+          <a href="">lược đồ trang bị</a>
+          <a href="">túi ngọc</a>
+          <a href="">bảng bổ trợ</a>
+          <a href="">esport</a>
+          <a href="">trạm quan sát</a>
+          <a href="">khám phá</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+  <!-- Banner silder -->
+  <div class="banner-box">
+    <div class="linebox lbi"></div>
+    <div class="music-play" id="js-music-play">      
+      <a href="javascript:;" id="btn-music" class="btn-music sp hv off"></a>
+      <img src="./assets/img/musicplay.gif" alt="" class="mspa hide" id="JS-mspa">
+    </div>
+    <div class="banner-video">
+      <img src="" alt="" id="js-main-img" class="main-img">
+      <video muted preload="auto" autoplay loop id="js-main-clip" class="main-clip"></video>
+    </div>
+  </div>
+  <!-- End Banner -->
+  <!-- Center Box -->
+  <div class="center-box">
+    <div class="centerbig-events">
+      <a class="cevent pe1" title="Hệ thống mùa giải" href="#"><img class="imgevent" src="/assets/img/center-big-1.png" alt=""></a>
+      <a class="cevent pe2" title="Quy tắc xử phạt" href="#"><img class="imgevent" src="/assets/img/center-big-2.png" alt=""></a>
+      <a class="cevent pe3" title="Hợp tác và văn hóa" href="#"><img class="imgevent" src="/assets/img/center-big-3.png" alt=""></a>
+      <a class="cevent pe4" title="Giải đấu quốc tế" href="#"><img class="imgevent" src="/assets/img/center-big-4.png" alt=""></a>
+    </div>
+    <div class="centermobile-events">
+      <a class="cevent-mobile pem1" title="Hệ thống mùa giải" href="#"><img class="imgevent-mobile" src="/assets/img/center-mobile-1.png" alt=""></a>
+      <a class="cevent-mobile pem2" title="Quy tắc xử phạt" href="#"><img class="imgevent-mobile" src="/assets/img/center-mobile-2.png" alt=""></a>
+      <a class="cevent-mobile pem3" title="Hợp tác và văn hóa" href="#"><img class="imgevent-mobile" src="/assets/img/center-mobile-3.png" alt=""></a>
+      <a class="cevent-mobile pem4" title="Giải đấu quốc tế" href="#"><img class="imgevent-mobile" src="/assets/img/center-mobile-4.png" alt=""></a>
+    </div>
+  </div>
+  <!-- Center End -->
+  <!-- Content -->
+  <div class="container-box uppost">
+    <div class="content-box">
+      <div class="main-post bw">
+        <div class="herop">
+          <div class="hk-ph fei">
+            <div class="hk-icon">
+              <div class="hkbox" id="heroimg1">
+                <div id="hk-icon-1" class="hk-img hkbox-touch"></div>
+                <p class="titlehk black">Đỡ đòn</p>
+              </div>
+              <div class="hkbox" id="heroimg2">
+                <div id="hk-icon-2" class="hk-img"></div>
+                <p class="titlehk noside">Đấu sĩ</p>
+              </div>
+              <div class="hkbox" id="heroimg3">
+                <div id="hk-icon-3" class="hk-img"></div>
+                <p class="titlehk noside">Sát thủ</p>
+              </div>
+              <div class="hkbox" id="heroimg4">
+                <div id="hk-icon-4" class="hk-img"></div>
+                <p class="titlehk noside">Pháp sư</p>
+              </div>
+              <div class="hkbox" id="heroimg5">
+                <div id="hk-icon-5" class="hk-img"></div>
+                <p class="titlehk noside">Xạ thủ</p>
+              </div>
+              <div class="hkbox" id="heroimg6">
+                <div id="hk-icon-6" class="hk-img"></div>
+                <p class="titlehk noside">Trợ thủ</p>
+              </div>
+            </div>
+            <div class="rotb">              
+              <img src="./assets/img/heroimg1.png" alt="" id="heroimg1png" class="center-rotb">
+              <img src="./assets/img/heroimg2.png" alt="" id="heroimg2png" class="center-rotb hide">
+              <img src="./assets/img/heroimg3.png" alt="" id="heroimg3png" class="center-rotb hide">
+              <img src="./assets/img/heroimg4.png" alt="" id="heroimg4png" class="center-rotb hide">
+              <img src="./assets/img/heroimg5.png" alt="" id="heroimg5png" class="center-rotb hide">
+              <img src="./assets/img/heroimg6.png" alt="" id="heroimg6png" class="center-rotb hide">
+              <img src="./assets/img/border_hero_top.png" alt="" class="top-rotb rl">
+              <img src="./assets/img/border_hero_bot.png" alt="" class="bot-rotb rl">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-box bw">
+        <div class="hero-popular fei">
+          <div class="stp">
+            <div class="hp-title"></div>
+            <span class="hpt">ANH HÙNG MỚI</span>
+          </div>
+          <div class="hp-imgs">
+            <a href="#" title="Tây Thi - Linh Lực Huyễn Sa" class="hp-big">
+              <img src="/assets/img/523-bigskin-1.webp" alt="" class="hp-imgbig">
+            </a>
+            <div class="fhp-imgs">
+              <a href="#" title="Tôn Thượng Hương - Khẩu Pháo Hạng Nặng" class="hp-small">
+                <img src="/assets/img/111-mobileskin-1.webp" alt="" class="hp-imgsmall">
+              </a>
+              <a href="#" title="Dolia - Giọng Hát Nhân Ngư" class="hp-small">
+                <img src="/assets/img/159-mobileskin-1.webp" alt="" class="hp-imgsmall">
+              </a>
+              <a href="#" title="Dương Ngọc Hoàn - Nghê Thường Khúc" class="hp-small">
+                <img src="/assets/img/176-mobileskin-1.webp" alt="" class="hp-imgsmall">
+              </a>
+              <a href="#" title="Đại Kiều - Biển Cả Huyền Diệu" class="hp-small">
+                <img src="/assets/img/191-mobileskin-1.webp" alt="" class="hp-imgsmall">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Logic -->
+  <script src="/assets/js/logic.js"></script>
+</body>
+
+</html>

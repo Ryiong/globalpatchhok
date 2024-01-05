@@ -1,0 +1,96 @@
+/* Animation */
+@keyframes musicplay {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.pm {
+    animation: musicplay 4s infinite linear;
+}
+@keyframes lineboxin {
+    0% {
+        opacity: 0;
+        filter: brightness(1);
+    }
+    20% {
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+    100% {
+        opacity: 0;
+        bottom: 5%;
+        filter: brightness(1);
+    }
+}
+.lbi {
+    animation: lineboxin 2s infinite ease-in-out;
+}
+@keyframes pushevent {
+    0% {opacity: 0 ; transform: translateY(45%);}
+    100% {opacity: 1;transform: translateY(0%);}
+}
+.pe1 {
+    animation: pushevent 1s ease 0s both;
+}
+.pe2 {
+    animation: pushevent 1s ease 0.25s both;
+}
+.pe3 {
+    animation: pushevent 1s ease 0.5s both;
+}
+.pe4 {
+    animation: pushevent 1s ease 0.75s both;
+}
+.pp {
+    animation: pushevent 0.5s ease 1s both;
+}
+@keyframes pusheventmobile {
+    0% {width: 0;}
+    100% {width: 20%;}
+}
+.pem1 {
+    animation: pusheventmobile 1s ease 0s both;
+}
+.pem2 {
+    animation: pusheventmobile 1s ease 0.25s both;
+}
+.pem3 {
+    animation: pusheventmobile 1s ease 0.5s both;
+}
+.pem4 {
+    animation: pusheventmobile 1s ease 0.75s both;
+}
+@keyframes rot {
+    0% {transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+.rl {
+    animation: rot 20s linear infinite;
+}
+
+@keyframes facein {
+    0% {opacity: 0 ; transform: translateY(4.5%);}
+    100% {opacity: 1;transform: translateY(0%);}
+}
+
+.fei {
+    animation: facein 1s ease 0.5s both;
+}
+
+/* Slider IMG */
+  @keyframes imgin {
+   0% {clip: rect(0, 100vw, 0px, 0px);}
+   100% {clip: rect(0, 100vw, 1080px, 0px);}
+}
+
+.imgin {
+    animation: imgin 1s ease-in-out 0s both;
+}
+
+  @keyframes imgout {
+    0% {clip: rect(0, 100vw, 1080px, 0px);}
+    100% {clip: rect(0, 100vw, 0px, 0px);}
+}
+
+.imgout {
+    animation: imgout 1.0s ease-in-out 0s both;
+}
