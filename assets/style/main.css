@@ -204,7 +204,7 @@
 }
 .cevent:hover .imgevent {
     filter: brightness(1.5);
-    transform: scale(1.075);
+    transform: scale(0.975);
 }
 .cevent-mobile {
     width: 20%;
@@ -321,6 +321,7 @@
     width: 100%;
     justify-content: center;
     display: flex;
+    margin-top: 30px;
 }
 .hk-ph {
     position: relative;
@@ -383,4 +384,105 @@
 
 #hk-icon-5 {
     background-position: -315px -86px;
+}
+
+/* Footer */
+.footer-box {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 69%, rgba(240,242,245,1) 100%);
+    margin-top: 30px;
+}
+img.mapimg {
+    width: 200px;
+    filter: brightness(0.62) hue-rotate(283deg) contrast(0.95);
+}
+.social-nets, .network-dis {
+    display: flex;
+    flex-wrap: wrap;
+}
+.social {
+    background-color: rgba(111, 125, 134, 0.25);
+    margin: 10px 12px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #656565;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+.isocial {
+    font-size: 17px;
+    float: inline-start;
+}
+.social::after {
+    content: "";
+    background: #656565;
+    width: 0px;
+    height: 2px;
+    display: flow;
+    margin-top: 3px;
+    border-radius: 4px;
+    transition: .85s ease-in-out;
+}
+.social:hover:after {
+    width: 100%;
+}
+.linef {
+    width: 95%;
+    margin: auto;
+    height: 4.5px;
+    background-color: rgba(101, 101, 101, .65);
+    border-radius: 50px;
+}
+.content-footer {
+    display: flex;
+    margin-top: 35px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.webmean, .downfooter {
+    width: 50%;
+}
+.para-web {
+    color: #6F7D86;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.downfooter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.downbox {
+    margin: 0 17px;
+}
+.linkdown {
+    position: relative;
+}
+.idown {
+    width: 124px;
+    height: 37px;
+}
+.titledown {
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(78, 97, 109);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.icondown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.webauthor {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    color: rgb(101, 101, 101);
+    padding-bottom: 7.5px;
 }

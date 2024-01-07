@@ -22,14 +22,19 @@
     .fei {
         animation-delay: 1s;
     }
+    article.post-outer-container {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 1019px) and (min-width: 600px){
     .mobile-down-nav {width: 40%;}
     .uppost {transform: translateY(-1.75%);}
     .centermobile-events {display: none;}
+    .road-map, .networks {width: 50%;}
+    .network-dis {width: 100%;}
 }
 @media screen and (max-width: 600px) {
-    .mobile-down-nav {width: 100%;}
+    .networks, .mobile-down-nav {width: 100%;}
     .music-play {width: 40px;height: 40px;margin-top: 15px;margin-right: 15px;}
     .off {background-position: -9px -6px;}
     .btn-music {background-position: -9px -6px;background-size: 1224%;}
@@ -39,7 +44,21 @@
     .centerbig-events {display: none;}
     .center-box {transform: translateY(0);}
     .container-box {margin-top: 24px;}
+    a.social {
+        font-size: 12px;
+        width: 50%;
+    }
+    .road-map {
+        display: none;
+    }
+    .social-nets {
+        flex-wrap: nowrap;
+    }
+    .footer-box {
+        margin-top: 0;
+    }
 }
 @media screen and (min-width: 1019px) {
     .centermobile-events,.mobile-menu {display: none;}
+    .networks {margin-left: 25px;}
 }
