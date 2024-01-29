@@ -1,13 +1,14 @@
 //bgm
-let bgAudio = new Audio(), bgAudiOff = false;
-    bgAudio.src = 'https://drive.google.com/uc?export=download&id=1-eJWCEaLcut_P4_x6-yxH86V1l4d4rvd';
-    bgAudio.autoplay = true;
-    bgAudio.loop = true;
+const bgAudio = new Audio()
+bgAudio.autoplay = true;
+bgAudio.loop = true;
+bgAudio.src = 'assets/music/DQ_Skin.mp3'
+let bgAudiOff = true
 const musicBtn = document.getElementById('btn-music')
 const mspa = document.getElementById('JS-mspa')
 const mpb = document.getElementById('js-music-play')
 bgAudio.pause()
-musicBtn.addEventListener('click', function() {
+musicBtn.addEventListener('click', function () {
     if (bgAudiOff == true) {
         bgAudio.play()
         bgAudiOff = false
@@ -37,22 +38,13 @@ function hideMenu() {
     openMenu.classList.remove('hide')
     closeMenu.classList.add('hide')
     mobileMenu.classList.remove('ds')
-}
-// Img Banner
-const mainImg = document.getElementById('js-main-img')
-// mainImg.src = '/assets/img/coverbanner.jpg'
+
 // Video Banner
 const mainClip = document.getElementById('js-main-clip')
-mainClip.src = '/assets/vid/lobbybanner.mp4'
-mainClip.poster = '/assets/img/coverbanner.jpg'
+mainClip.src = 'https://drive.google.com/uc?export=download&id=150_VIrM8FnenNRdFrQbflTmenEMYkvCv'
+mainClip.poster = 'https://vgvdpatchglobal.files.wordpress.com/2024/01/coverbanner.jpg'
 
-// Display banner
-if (mainImg.src == mainClip.poster) {
-    mainClip.remove()
-    mpb.remove()
-} else {
-    mainImg.remove()
-}
+
 // CSS Post
 const centerBox = document.querySelector('.center-box')
 const contentBox = document.querySelector('.container-box')
@@ -71,7 +63,7 @@ const iRoles = document.getElementsByClassName(c)
 const tRoles = document.getElementsByClassName('titlehk')
 const imgRoles = document.getElementsByClassName('center-rotb')
 
-function removeRole () {
+function removeRole() {
     for (let iRole of iRoles) {
         iRole.classList.remove('hkbox-touch')
     }
@@ -81,17 +73,17 @@ function removeRole () {
     }
 }
 for (let hkBox of hkBoxs) {
-    hkBox.addEventListener('click', function(){
-        i = parseInt(hkBox.id.slice(7, ))
+    hkBox.addEventListener('click', function () {
+        i = parseInt(hkBox.id.slice(7,))
         for (let imgRole of imgRoles) {
             imgRole.classList.add('imgout')
-            setTimeout(function() {
+            setTimeout(function () {
                 imgRole.classList.add('hide')
                 imgRole.classList.remove('imgout')
                 imgRole.classList.remove('imgin')
             }, 1000)
         }
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById(hkBox.id + a).classList.remove('hide')
             document.getElementById(hkBox.id + a).classList.add('imgin')
         }, 1000)
@@ -103,22 +95,24 @@ for (let hkBox of hkBoxs) {
 }
 
 // Loop Auto Img
-setInterval(function(){
-    document.getElementById(b+i+a).classList.add('imgout')
-    setTimeout(function() {
-        document.getElementById(b+i+a).classList.add('hide')
-        document.getElementById(b+i+a).classList.remove('imgout')
-        document.getElementById(b+i+a).classList.remove('imgin')
+setInterval(function () {
+    document.getElementById(b + i + a).classList.add('imgout')
+    setTimeout(function () {
+        document.getElementById(b + i + a).classList.add('hide')
+        document.getElementById(b + i + a).classList.remove('imgout')
+        document.getElementById(b + i + a).classList.remove('imgin')
     }, 1000)
     i++
-    if(i > 5){
-        i = 0}
-    setTimeout(function(){
-        document.getElementById(b+i+a).classList.remove('hide')
-        document.getElementById(b+i+a).classList.add('imgin')
+    if (i > 5) {
+        i = 0
+    }
+    setTimeout(function () {
+        document.getElementById(b + i + a).classList.remove('hide')
+        document.getElementById(b + i + a).classList.add('imgin')
     }, 1000)
     removeRole()
     iRoles[i].classList.add('hkbox-touch')
     document.getElementById(d + i).classList.add('black')
     document.getElementById(d + i).classList.remove('noside')
-},6000)
+}, 6000)
+}
