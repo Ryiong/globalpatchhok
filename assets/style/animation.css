@@ -95,3 +95,106 @@
     animation: imgout 1.0s ease-in-out 0s both;
 }
 
+@keyframes sologafont {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-filter: blur(0px);
+    }
+}
+
+.slogan-font {
+    animation: sologafont 1s both 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadeIn {
+    animation: fadeIn 1s both;
+}
+
+.tl-chap-ani {
+    animation: fadeIn 1s both;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.fadeOut {
+    animation: fadeOut 1s both;
+}
+
+@keyframes logoLore {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logoLore {
+    animation: logoLore 1s both ;
+}
+
+@keyframes chapterImg {
+    0% {
+        margin-left: -5rem;
+    }
+    100% {
+        margin-left: 1rem;
+    }
+}
+
+.chapimgAni {
+    animation: chapterImg 1s both 1s;
+}
+
+@keyframes hkLinebox {
+    0% {
+        bottom: 5rem;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 1.35rem;
+        opacity: 0;
+    }
+}
+.linelore-ani {
+    animation: hkLinebox 3.45s both infinite ease;
+}
+
+@keyframes loadingwave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 12rem;
+    }
+}
+.loadingWave {
+    animation: loadingwave 2.54s both infinite linear;
+}
