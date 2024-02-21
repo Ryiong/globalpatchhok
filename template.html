@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .filter-select {
+            font-size: 20px;
+            width: 180px;
+            transition: .25s linear;
+        }
+        .filter-title {
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .filter-title, .filter-item {
+            padding: 0px 7px;
+            transition: .25s linear;
+        }
+        .filter-select:hover .filter-title {
+            background: rgb(39,129,178);
+            background: linear-gradient(180deg, rgba(39,129,178,1) 0%, rgba(84,103,115,1) 100%);
+            font-weight: bold;
+            color: #fff;
+        }
+        .icon-role {
+            background: url('https://vgvdpatchglobal.files.wordpress.com/2024/01/main-btn.png') no-repeat;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-size: 900%;
+            filter: grayscale(1);
+            margin-right: 15px;
+        }
+        #role-tank {
+            background-position: -3px -52px;
+        }
+        #role-fighter {
+            background-position: -36px -52px;
+        }
+        #role-assassin {
+            background-position: -72px -52px;
+        }
+        #role-mage {
+            background-position: -110px -52px;
+        }
+        #role-marksmen {
+            background-position: -148px -52px;
+        }
+        #role-support {
+            background-position: -187px -52px;
+        }
+        .filter-list {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+        }
+        .filter-item {
+            display: flex;
+            height: 40px;
+            align-items: center;
+        }
+        .filter-item span {
+            
+        }
+    </style>
+    <div class="filter-select">
+        <div class="filter-title">
+            <span>Vai trò</span>
+            <i class="fa-solid fa-chevron-down" style="color: #44424d;"></i>
+        </div>
+        <ul class="filter-list">
+            <li class="filter-item selected"><span>Tất cả</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-tank"></i><span>Đỡ đòn</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-fighter"></i><span>Đấu sĩ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-assassin"></i><span>Sát thủ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-mage"></i><span>Pháp sư</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-marksmen"></i><span>Xạ thủ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-support"></i><span>Hỗ trợ</span></li>
+        </ul>
+    </div>
+    <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
+</body>
+</html>

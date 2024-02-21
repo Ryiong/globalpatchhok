@@ -2,7 +2,7 @@
 const bgAudio = new Audio()
 bgAudio.autoplay = true;
 bgAudio.loop = true;
-bgAudio.src = 'assets/music/mulan-skinbg.mp3'
+bgAudio.src = 'assets/music/bannerglobal.mp3'
 let bgAudiOff = true
 const musicBtn = document.getElementById('btn-music')
 const mspa = document.getElementById('JS-mspa')

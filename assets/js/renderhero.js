@@ -1,4 +1,4 @@
-<!-- Render -->
+// <!-- Render -->
 const enter = document.createElement('br')
 function renderSpan (i) {
 	var dom = document.createElement('span');
