@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
     <style>
         .filter-select {
-            font-size: 20px;
             width: 180px;
             transition: .25s linear;
+            font-family: 'Montserrat', sans-serif;
+            height: 40px;
+            overflow: hidden;
+            font-size: 14px;
         }
         .filter-title {
             height: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: #fff;
+            font-weight: bold;
+            background: url('./assets/img/detail2.png') no-repeat;
+            background-size: 106%;
+            background-position: -5px -11px;
         }
         .filter-title, .filter-item {
-            padding: 0px 7px;
+            padding: 0px 10px;
             transition: .25s linear;
-        }
-        .filter-select:hover .filter-title {
-            background: rgb(39,129,178);
-            background: linear-gradient(180deg, rgba(39,129,178,1) 0%, rgba(84,103,115,1) 100%);
-            font-weight: bold;
-            color: #fff;
+            cursor: pointer;
         }
         .icon-role {
             background: url('https://vgvdpatchglobal.files.wordpress.com/2024/01/main-btn.png') no-repeat;
@@ -36,6 +42,10 @@
             background-size: 900%;
             filter: grayscale(1);
             margin-right: 15px;
+            transition: 0.2s linear;
+        }
+        .filter-item:hover .icon-role {
+            filter: grayscale(0);
         }
         #role-tank {
             background-position: -3px -52px;
@@ -64,26 +74,78 @@
             display: flex;
             height: 40px;
             align-items: center;
+            outline: 0.5px solid #4e616d;
+            padding: 3px 10px;
         }
-        .filter-item span {
-            
+        #icon-list {
+            transition: 0.2s linear;
         }
     </style>
     <div class="filter-select">
         <div class="filter-title">
             <span>Vai trò</span>
-            <i class="fa-solid fa-chevron-down" style="color: #44424d;"></i>
+            <i id="icon-list" class="fa-solid fa-chevron-down" style="color: #fff;"></i>
         </div>
         <ul class="filter-list">
-            <li class="filter-item selected"><span>Tất cả</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-tank"></i><span>Đỡ đòn</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-fighter"></i><span>Đấu sĩ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-assassin"></i><span>Sát thủ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-mage"></i><span>Pháp sư</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-marksmen"></i><span>Xạ thủ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-support"></i><span>Hỗ trợ</span></li>
+            <li class="filter-item selected"><span id="all">Tất cả</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-tank"></i><span id="tank">Đỡ đòn</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-fighter"></i><span id="fighter">Đấu sĩ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-assassin"></i><span id="assassin">Sát thủ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-mage"></i><span id="mage">Pháp sư</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-marksmen"></i><span id="marksmen">Xạ thủ</span></li>
+            <li class="filter-item"><i class="icon-role" id="role-support"></i><span id="support">Hỗ trợ</span></li>
         </ul>
     </div>
     <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
+    <script>
+        let menuRole = document.querySelector('.filter-select')
+        let openRoleList = document.querySelector('.filter-title')
+        let openRoleListTitle = openRoleList.querySelector('span')
+        let iconList = document.getElementById('icon-list')
+        let roleItems = document.getElementsByClassName('filter-item')
+        let checkMenuRole = false;
+        let checkRole = 'all';
+        function useRole() {
+            if (checkRole == 'all') {
+                openRoleListTitle.innerText = 'Vai trò'
+            } else if (checkRole == 'tank') {
+                openRoleListTitle.innerText = 'Đỡ đòn'
+            } else if (checkRole == 'fighter') {
+                openRoleListTitle.innerText = 'Đấu sĩ'
+            } else if (checkRole == 'assassin') {
+                openRoleListTitle.innerText = 'Sát thủ'
+            } else if (checkRole == 'mage') {
+                openRoleListTitle.innerText = 'Pháp sư'
+            } else if (checkRole == 'marksmen') {
+                openRoleListTitle.innerText = 'Xạ thủ'
+            } else if (checkRole == 'support') {
+                openRoleListTitle.innerText = 'Hỗ trợ'
+            }
+        }
+        function openRole() {
+            checkMenuRole = true;
+            menuRole.style.height = '364px'
+            iconList.style.transform = 'rotate(180deg)'
+        }
+        function closeRole() {
+            checkMenuRole = false;
+            menuRole.style.height = ''
+            iconList.style.transform = ''
+        }
+        openRoleList.addEventListener('click', () => {
+            if (checkMenuRole == false) {
+                openRole()
+            } else {
+                closeRole()
+            }
+        })
+        for (let roleItem of roleItems) {
+            roleItem.addEventListener('click', () => {
+                checkRole = roleItem.querySelector('span').id
+                useRole()
+                closeRole()
+            })
+        }
+    </script>
 </body>
 </html>
