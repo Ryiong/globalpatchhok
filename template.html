@@ -1,151 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/normalize.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/blogger.css">
+    <link rel="stylesheet" href="./assets/style/animation.css">
+    <link rel="stylesheet" href="./assets/style/responsive.css">
+    <link rel="stylesheet" href="/assets/style/season.css">
 </head>
+
 <body>
-    <style>
-        .filter-select {
-            width: 180px;
-            transition: .25s linear;
-            font-family: 'Montserrat', sans-serif;
-            height: 40px;
-            overflow: hidden;
-            font-size: 14px;
-        }
-        .filter-title {
-            height: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            font-weight: bold;
-            background: url('./assets/img/detail2.png') no-repeat;
-            background-size: 106%;
-            background-position: -5px -11px;
-        }
-        .filter-title, .filter-item {
-            padding: 0px 10px;
-            transition: .25s linear;
-            cursor: pointer;
-        }
-        .icon-role {
-            background: url('https://vgvdpatchglobal.files.wordpress.com/2024/01/main-btn.png') no-repeat;
-            display: block;
-            width: 30px;
-            height: 30px;
-            background-size: 900%;
-            filter: grayscale(1);
-            margin-right: 15px;
-            transition: 0.2s linear;
-        }
-        .filter-item:hover .icon-role {
-            filter: grayscale(0);
-        }
-        #role-tank {
-            background-position: -3px -52px;
-        }
-        #role-fighter {
-            background-position: -36px -52px;
-        }
-        #role-assassin {
-            background-position: -72px -52px;
-        }
-        #role-mage {
-            background-position: -110px -52px;
-        }
-        #role-marksmen {
-            background-position: -148px -52px;
-        }
-        #role-support {
-            background-position: -187px -52px;
-        }
-        .filter-list {
-            padding: 0;
-            list-style-type: none;
-            margin: 0;
-        }
-        .filter-item {
-            display: flex;
-            height: 40px;
-            align-items: center;
-            outline: 0.5px solid #4e616d;
-            padding: 3px 10px;
-        }
-        #icon-list {
-            transition: 0.2s linear;
-        }
-    </style>
-    <div class="filter-select">
-        <div class="filter-title">
-            <span>Vai trò</span>
-            <i id="icon-list" class="fa-solid fa-chevron-down" style="color: #fff;"></i>
-        </div>
-        <ul class="filter-list">
-            <li class="filter-item selected"><span id="all">Tất cả</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-tank"></i><span id="tank">Đỡ đòn</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-fighter"></i><span id="fighter">Đấu sĩ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-assassin"></i><span id="assassin">Sát thủ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-mage"></i><span id="mage">Pháp sư</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-marksmen"></i><span id="marksmen">Xạ thủ</span></li>
-            <li class="filter-item"><i class="icon-role" id="role-support"></i><span id="support">Hỗ trợ</span></li>
-        </ul>
+    <div class="rotate-screen">
+        <img src="https://vgvdpatchglobal.files.wordpress.com/2024/02/rotatescreen.webp" alt="">
     </div>
-    <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
-    <script>
-        let menuRole = document.querySelector('.filter-select')
-        let openRoleList = document.querySelector('.filter-title')
-        let openRoleListTitle = openRoleList.querySelector('span')
-        let iconList = document.getElementById('icon-list')
-        let roleItems = document.getElementsByClassName('filter-item')
-        let checkMenuRole = false;
-        let checkRole = 'all';
-        function useRole() {
-            if (checkRole == 'all') {
-                openRoleListTitle.innerText = 'Vai trò'
-            } else if (checkRole == 'tank') {
-                openRoleListTitle.innerText = 'Đỡ đòn'
-            } else if (checkRole == 'fighter') {
-                openRoleListTitle.innerText = 'Đấu sĩ'
-            } else if (checkRole == 'assassin') {
-                openRoleListTitle.innerText = 'Sát thủ'
-            } else if (checkRole == 'mage') {
-                openRoleListTitle.innerText = 'Pháp sư'
-            } else if (checkRole == 'marksmen') {
-                openRoleListTitle.innerText = 'Xạ thủ'
-            } else if (checkRole == 'support') {
-                openRoleListTitle.innerText = 'Hỗ trợ'
-            }
-        }
-        function openRole() {
-            checkMenuRole = true;
-            menuRole.style.height = '364px'
-            iconList.style.transform = 'rotate(180deg)'
-        }
-        function closeRole() {
-            checkMenuRole = false;
-            menuRole.style.height = ''
-            iconList.style.transform = ''
-        }
-        openRoleList.addEventListener('click', () => {
-            if (checkMenuRole == false) {
-                openRole()
+    <div class="header">
+        <div class="header-bar">
+            <div class="left-header">
+                <div class="homepage">
+                    <a href="http://vgvdpatchglobal.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                    </a>
+                </div>
+            </div>
+            <div class="right-header">
+                <div class="link-patch">
+                    <a href="#" class="link-to-patch s5p"><span>PATCH</span></a>
+                </div>
+                <div class="music-season5">
+                    <div class="mls5 music-line" id="ml1"></div>
+                    <div class="mls5 music-line" id="ml2"></div>
+                    <div class="mls5 music-line" id="ml3"></div>
+                    <div class="mls5 music-line" id="ml4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="download-box">
+        </div>
+        <div class="header-video" id="header-video">
+            <div class="header-video">
+                <video class="video" preload="auto" poster="./assets/img/season/headerimg.jpg"
+                    src="/assets/img/season/headervideo.mp4" autoplay="true" loop="true"></video>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section1 part-season">
+            <img src="./assets/img/season/giala.png" alt="Già La" class="newseason-hero">
+            <h2 class="title-section"></h2>
+            <h3 class="detail-title"></h3>
+            <span class="section-content"></span>
+            <a href="#" class="active-btn" target="_blank" id="s1-heroskill"></a>
+            <a href="javascript:;" class="active-btn" id="s1-videohero"></a>
+            <div class="video-season hide" id="video-hero">
+                <div class="video-box">
+                    <i class="close-video" id="close-video-hero"></i>
+                    <div class="place-video"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section2 part-season">
+            <img src="./assets/img/season/s5skin.png" alt="Skin mùa giải" class="newseason-hero">
+            <h2 class="title-section"></h2>
+            <h3 class="detail-title"></h3>
+            <span class="section-content"></span>
+            <a href="javascript:;" class="active-btn" id="s2-skinseason"></a>
+            <div class="video-season hide" id="skin-season">
+                <div class="video-box">
+                    <i class="close-video" id="close-skin-season"></i>
+                    <div class="place-video"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section3 part-season">
+            <h2 class="title-section"></h2>
+            <h3 class="detail-title"></h3>
+            <div class="rot-img">
+                <img src="./assets/img/season/tieuman.png" alt="Cơ Tiểu Mãn - Capoeirista" class="center-rotb">
+                <img src="./assets/img/season/border_hero_top.png" alt="Border Top" class="top-rotb rl">
+                <img src="./assets/img/season/border_hero_bot.png" alt="Border Bot" class="bot-rotb rl">
+            </div>
+            <a href="javascript:;" class="active-btn" id="s3-newskin"></a>
+            <div class="video-season hide" id="new-skin">
+                <div class="video-box">
+                    <i class="close-video" id="close-new-skin"></i>
+                    <div class="place-video"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section4 part-season">
+            <h2 class="title-section"></h2>
+            <div class="feature-frame">
+                <div class="feature-label"></div>
+                <div class="feature-box">
+                    <img src="/assets/img/season/feature1.jpg" alt="feature" class="feature-item">
+                    <img src="/assets/img/season/feature2.jpg" alt="feature" class="feature-item hide">
+                    <img src="/assets/img/season/feature3.jpg" alt="feature" class="feature-item hide">
+                    <img src="/assets/img/season/feature4.jpg" alt="feature" class="feature-item hide">
+                    <img src="/assets/img/season/feature5.jpg" alt="feature" class="feature-item hide">
+                </div>
+            </div>
+            <div class="btn-feature">
+                <span class="active-feature" id="btn-active-feature1"></span>
+                <span class="active-feature" id="btn-active-feature2"></span>
+                <span class="active-feature" id="btn-active-feature3"></span>
+                <span class="active-feature" id="btn-active-feature4"></span>
+                <span class="active-feature" id="btn-active-feature5"></span>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        const halfWinHeight = window.innerHeight / 2;
+        const audioBgS5 = new Audio();
+        audioBgS5.autoplay = false;
+        audioBgS5.loop = true;
+        audioBgS5.src = 'https://ryiong.github.io/globalpatchhok/assets/music/hok-season5.mp3';
+        let bgSeasonPlay = false;
+        const musicSeasonBTN = document.querySelector('.music-season5');
+        let audioBfVideo = bgSeasonPlay;
+        musicSeasonBTN.addEventListener('click', () => {
+            if (bgSeasonPlay) {
+                musicStop(false)
             } else {
-                closeRole()
+                musicPlay(true)
             }
         })
-        for (let roleItem of roleItems) {
-            roleItem.addEventListener('click', () => {
-                checkRole = roleItem.querySelector('span').id
-                useRole()
-                closeRole()
+        const partSeasons = document.querySelectorAll('.part-season')
+        function musicStop(a) {
+            audioBgS5.pause();
+            audioBfVideo = a;
+            bgSeasonPlay = false;
+        }
+        function musicPlay(a) {
+            audioBgS5.play();
+            audioBfVideo = a;
+            bgSeasonPlay = true;
+        }
+        // Video Hero - S1
+        const videoHero = document.getElementById('video-hero')
+        document.getElementById('s1-videohero').addEventListener('click', () => {
+            videoHero.classList.remove('hide');
+            musicStop(audioBfVideo);
+            videoHero.querySelector('.place-video').innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FX7QzGjrPTI?si=8i4BwRIljsbYnZBe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        })
+        document.getElementById('close-video-hero').addEventListener('click', () => {
+            videoHero.classList.add('hide');
+            musicPlay(audioBfVideo);
+            if (audioBfVideo == false) {
+                musicStop(bgSeasonPlay)
+            } else {
+                musicPlay(bgSeasonPlay)
+            }
+            videoHero.querySelector('.place-video').innerHTML = null
+        })
+        // New Skin - S3
+        const skinSeason = document.getElementById('new-skin')
+        document.getElementById('s3-newskin').addEventListener('click', () => {
+            skinSeason.classList.remove('hide');
+            musicStop(audioBfVideo);
+            skinSeason.querySelector('.place-video').innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ir8SqI-08bQ?si=AyXrmW3x-zp3B-VK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        })
+        document.getElementById('close-new-skin').addEventListener('click', () => {
+            skinSeason.classList.add('hide');
+            musicPlay(audioBfVideo);
+            if (audioBfVideo == false) {
+                musicStop(bgSeasonPlay)
+            } else {
+                musicPlay(bgSeasonPlay)
+            }
+            skinSeason.querySelector('.place-video').innerHTML = null
+        })
+        // Skin Season - S2
+        const newSkin = document.getElementById('skin-season')
+        document.getElementById('s2-skinseason').addEventListener('click', () => {
+            skinSeason.classList.remove('hide');
+            musicStop(audioBfVideo);
+            skinSeason.querySelector('.place-video').innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HC7Oy7oOELE?si=mgXOXTozvlWYT-Nm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        })
+        document.getElementById('close-skin-season').addEventListener('click', () => {
+            skinSeason.classList.add('hide');
+            musicPlay(audioBfVideo);
+            if (audioBfVideo == false) {
+                musicStop(bgSeasonPlay)
+            } else {
+                musicPlay(bgSeasonPlay)
+            }
+            skinSeason.querySelector('.place-video').innerHTML = null
+        })
+        // Scroll Animation
+        window.addEventListener('scroll', (event) => {
+            partSeasons.forEach(part => {
+                let offset = part.offsetTop;
+                let heightPart = part.offsetHeight;
+                if (this.scrollY + halfWinHeight >= offset && this.scrollY + halfWinHeight < offset + heightPart) {
+                    part.classList.add('animation-season5')
+                } else {
+                    part.classList.remove('animation-season5')
+                }
+            })
+
+        })
+        // Change Feature
+        const btnFeature = document.querySelectorAll('.active-feature');
+        const imgFeature = document.querySelectorAll('.feature-item');
+        for (let i = 0; i < btnFeature.length; i++) {
+            btnFeature[i].addEventListener('click', () => {
+                for (let imgF of imgFeature) {
+                    imgF.classList.add('hide')
+                }
+                imgFeature[i].classList.remove('hide')
             })
         }
     </script>
 </body>
+
 </html>

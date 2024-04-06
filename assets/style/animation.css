@@ -199,20 +199,67 @@
     animation: loadingwave 2.54s both infinite linear;
 }
 
-@keyframes linnerMorePost {
+@keyframes s5Patch {
     0% {background-position: 0px 0px;}
-    9.09% {background-position: -100px 0px;}
-    18.18% {background-position: -200px 0px;}
-    27.27% {background-position: -300px 0px;}
-    36.36% {background-position: -400px 0px;}
-    45.45% {background-position: -500px 0px;}
-    54.54% {background-position: 0px -22.22px;}
-    63.63% {background-position: -100px -22.22px;}
-    72.72% {background-position: -200px -22.22px;}
-    81.81% {background-position: -300px -22.22px;}
-    90.90% {background-position: -400px -22.22px;}
-    100.0% {background-position: -500px -22.22px;}
+    9.09% {background-position: -125px 0px;}
+    18.18% {background-position: -250px 0px;}
+    27.27% {background-position: -375px 0px;}
+    36.36% {background-position: -500px 0px;}
+    45.45% {background-position: -625px 0px;}
+    54.54% {background-position: 0px -27.84px;}
+    63.63% {background-position: -125px -27.84px;}
+    72.72% {background-position: -250px -27.84px;}
+    81.81% {background-position: -375px -27.84px;}
+    90.90% {background-position: -500px -27.84px;}
+    100.0% {background-position: -625px -27.84px;}
 }
-.lmp {
-    animation: linnerMorePost 1.5s both infinite steps(1);
+.s5p {
+    animation: s5Patch 1.5s both infinite steps(1);
+}
+
+@keyframes musicLine {
+    0% {height: 0px;}
+    25% {height: 10px;}
+    35% {height: 20px;}
+    75% {height: 0px};
+    85% {height: 15px;}
+    100% {height: 0px;}
+}
+.mls5 {animation: musicLine both infinite linear;}
+
+@keyframes seasonTurnIn {
+    0% {opacity: 0; transform: translateY(15px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+@keyframes seasonFadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes seasonFadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.animation-season5>.title-section {
+    animation: seasonTurnIn 1s both ease;
+}
+.animation-season5>.detail-title {
+    animation: seasonTurnIn 1s both 0.5s ease;
+}
+.animation-season5>a.active-btn {
+    animation: seasonTurnIn 1s both 0.95s ease;
+}
+.animation-season5>.feature-frame {
+    animation: seasonTurnIn 1s both 0.25s ease;
+}
+.animation-season5>.btn-feature {
+    animation: seasonTurnIn 1s both 0.65s ease;
+}
+.animation-season5>.section-content {
+    animation: seasonFadeIn 1.5s both 1s ease;
+}
+.animation-season5>.newseason-hero {
+    animation: seasonFadeIn 1.5s both 0.5s ease;
+}
+.animation-season5>.rot-img {
+    animation: seasonFadeIn 1.5s both 0.5s ease;
 }
