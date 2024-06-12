@@ -1,0 +1,114 @@
+.herop {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.hk-ph {
+    position: relative;
+    margin-top: 25px;
+    width: 85%;
+}
+
+.hk-icon {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 30;
+    position: relative;
+}
+
+.hk-img {
+    background: url('https://vgvdpatchglobal.files.wordpress.com/2024/01/main-btn.png') no-repeat;
+    height: 60px;
+    width: 100%;
+    background-size: 800%;
+    filter: grayscale(1);
+    transition: 0.35s ease-in-out;
+}
+
+.hkbox:hover {
+    cursor: pointer;
+}
+
+.hkbox:hover .hk-img {
+
+    filter: grayscale(0);
+    transform: translateY(-7.5px);
+}
+
+.hkbox-touch {
+    transform: translateY(-7.5px);
+    filter: grayscale(0);
+}
+
+#hk-icon-0 {
+    background-position: -2px -88px;
+}
+
+#hk-icon-1 {
+    background-position: -68px -91px;
+    background-size: 1000%;
+}
+
+#hk-icon-2 {
+    background-position: -120px -86px;
+}
+
+#hk-icon-3 {
+    background-position: -208px -100px;
+}
+
+#hk-icon-4 {
+    background-size: 950%;
+    background-position: -272px -94px;
+}
+
+#hk-icon-5 {
+    background-position: -315px -86px;
+}
+
+.rotb {
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
+    height: calc((70vw *1080)/1920);
+}
+.center-rotb, .top-rotb, .bot-rotb {
+    width: 95%;
+    position: absolute;
+    overflow: hidden;
+}
+.top-rotb {
+    z-index: 20;
+}
+.center-rotb {
+    z-index: 10;
+}
+
+@keyframes rot {
+    0% {transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+.rl {
+    animation: rot 20s linear infinite;
+}
+
+/* Slider IMG */
+@keyframes imgin {
+    0% {clip: rect(0, 100vw, 0px, 0px);}
+    100% {clip: rect(0, 100vw, 1080px, 0px);}
+ }
+ 
+ .imgin {
+     animation: imgin 1s ease-in-out 0s both;
+ }
+ 
+   @keyframes imgout {
+     0% {clip: rect(0, 100vw, 1080px, 0px);}
+     100% {clip: rect(0, 100vw, 0px, 0px);}
+ }
+ 
+ .imgout {
+     animation: imgout 1.0s ease-in-out 0s both;
+ }
+ 

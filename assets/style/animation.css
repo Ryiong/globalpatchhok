@@ -59,13 +59,6 @@
 .pem4 {
     animation: pusheventmobile 1s ease 0.75s both;
 }
-@keyframes rot {
-    0% {transform: rotate(0);}
-    100%{transform: rotate(360deg);}
-}
-.rl {
-    animation: rot 20s linear infinite;
-}
 
 @keyframes facein {
     0% {opacity: 0 ; transform: translateY(4.5%);}
@@ -74,25 +67,6 @@
 
 .fei {
     animation: facein 1s ease 0.5s both;
-}
-
-/* Slider IMG */
-  @keyframes imgin {
-   0% {clip: rect(0, 100vw, 0px, 0px);}
-   100% {clip: rect(0, 100vw, 1080px, 0px);}
-}
-
-.imgin {
-    animation: imgin 1s ease-in-out 0s both;
-}
-
-  @keyframes imgout {
-    0% {clip: rect(0, 100vw, 1080px, 0px);}
-    100% {clip: rect(0, 100vw, 0px, 0px);}
-}
-
-.imgout {
-    animation: imgout 1.0s ease-in-out 0s both;
 }
 
 @keyframes sologafont {

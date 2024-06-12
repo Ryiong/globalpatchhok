@@ -315,9 +315,7 @@ a.link-to-patch span {
     background: url('https://vgvdpatchglobal.files.wordpress.com/2024/04/label5.png') 0 0 / cover no-repeat;
 }
 /* Animation */
-.rot-img, .newseason-hero, .section-content, .detail-title, a.active-btn, .title-section {
-    animation: seasonFadeOut 1s both 0.75s ease;
-}
+
 /* Video Box */
 .label-video {
     position: relative;
