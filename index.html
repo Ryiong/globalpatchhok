@@ -128,55 +128,40 @@
         </div>
       </div>
       <div class="side-box bw">
-        <div class="list-popular fei">
-          <div class="stp">
-            <div class="hp-title"></div>
-            <span class="hpt">ANH HÙNG MỚI</span>
-          </div>
-          <div class="hp-imgs">
-            <a href="" title="" class="hp-big">
-              <img src="" alt="" class="hp-imgbig">
-            </a>
-            <div class="fhp-imgs">
-              <a href="" title="" class="hp-small">
-                <img src="" alt="" id="sideimg1" class="hp-imgsmall">
-              </a>
-              <a href="" title="" class="hp-small">
-                <img src="" alt="" id="sideimg2" class="hp-imgsmall">
-              </a>
-              <a href="" title="" class="hp-small">
-                <img src="" alt="" id="sideimg3" class="hp-imgsmall">
-              </a>
-              <a href="" title="" class="hp-small">
-                <img src="" alt="" id="sideimg4" class="hp-imgsmall">
-              </a>
+        <div class="side-content">
+          <h4 class="title-side">Trang phục mới</h4>
+          <div class="content-lastest">
+            <div class="big-content lastest-contentbox">
+              <img src="" alt="" class="thumb-content-lastest">
+              <i></i>
+              <p class="title-content-lastest"></p>
+            </div>
+            <div class="small-contents">
+              <div class="small-content lastest-contentbox">
+                <img src="" alt="" class="thumb-content-lastest">
+                <i></i>
+                <p class="title-content-lastest"></p>
+              </div>
+              <div class="small-content lastest-contentbox">
+                <img src="" alt="" class="thumb-content-lastest">
+                <i></i>
+                <p class="title-content-lastest"></p>
+              </div>
+              <div class="small-content lastest-contentbox">
+                <img src="" alt="" class="thumb-content-lastest">
+                <i></i>
+                <p class="title-content-lastest"></p>
+              </div>
+              <div class="small-content lastest-contentbox">
+                <img src="" alt="" class="thumb-content-lastest">
+                <i></i>
+                <p class="title-content-lastest"></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="list-popular fei">
-          <div class="stp">
-            <div class="hp-title"></div>
-            <span class="hpt">TRANG PHỤC MỚI</span>
-          </div>
-          <div class="hp-imgs">
-            <a href="#" title="" class="hp-big">
-              <img src="" alt="" class="hp-imgbig">
-            </a>
-            <div class="fhp-imgs">
-              <a href="#" title="" class="hp-small">
-                <img src="" alt="" class="hp-imgsmall">
-              </a>
-              <a href="#" title="" class="hp-small">
-                <img src="" alt="" class="hp-imgsmall">
-              </a>
-              <a href="#" title="" class="hp-small">
-                <img src="" alt="" class="hp-imgsmall">
-              </a>
-              <a href="#" title="" class="hp-small">
-                <img src="" alt="" class="hp-imgsmall">
-              </a>
-            </div>
-          </div>
+          <h4 class="title-side">Trận đấu trong ngày</h4>
+          <p class="none-data" style="text-align: center; margin-bottom: 1.25rem;">Không có dữ liệu<br>Hiện chỉ hỗ trợ
+            giải đấu cấp S</p>
         </div>
       </div>
     </div>
@@ -240,9 +225,21 @@
       <div class="webcopyright"><span class="webauthor">© 2023 Ryiong</span></div>
     </div>
   </div>
-
+  <div class="support-box">
+    <div class="donate-box">
+      <img src="https://vgvdpatchglobal.wordpress.com/wp-content/uploads/2024/07/supportryiongicon.png"
+        alt="Donate for Ryiong">
+      <div class="close-donate"><span>X</span></div>
+    </div>
+  </div>
+  <script>
+    document.querySelector(".close-donate").addEventListener('click', () => {
+      document.querySelector(".support-box").style.transform = "translateX(122%)"
+      setTimeout(() => { document.querySelector(".support-box").style.display = "none" }, 2000)
+    })
+  </script>
   <!-- Logic -->
-  <script src="/assets/js/logic.js"></script>
+  <script src="./assets/js/logic.js"></script>
   <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
 </body>
 

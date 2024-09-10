@@ -38,6 +38,9 @@
     article.post-outer-container {
         width: 100%;
     }
+    .donate-box {
+        width: 15vw;
+    }
 }
 @media screen and (max-width: 1019px) and (min-width: 600px){
     .mobile-down-nav {
@@ -109,6 +112,9 @@
     }
     .downbox {
         margin: 0;
+    }
+    .donate-box {
+        width: 30vw;
     }
 }
 @media screen and (min-width: 1019px) {
