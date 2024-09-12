@@ -1,39 +1,81 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
     scroll-behavior: smooth;
 }
+
 body {
-    background-color: #f0f2f5;
-    font-family: 'Montserrat', sans-serif;
-    overflow: auto;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-w {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.cur-point {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.center-absolute {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+img {
+    display: block;
+}
+
 .hide {
     display: none !important;
 }
-.blk {
-    display: block;
+
+/* Reset Blogger CSS */
+.section {
+    margin: 0;
 }
-.ds {
-    height: 530px !important;
+
+.widget ul {
+    padding: 0;
+    margin: 0;
+    line-height: normal;
 }
-.bw {
-    background-color: #fff;
-}
-.uppost {
-    transform: translateY(-4.75%);
-}
-.black {
-    color: #000 !important;
-}
-p.noside {
-    border-left: 0px transparent solid;
-    border-right: 0px transparent solid;
-}
-.mtfp {
-    margin-top: 55px;
-}
-.mlfp {
-    margin-left: 25px;
+
+.widget li,
+.BlogArchive #ArchiveList ul.flat li {
+    padding: 0;
 }

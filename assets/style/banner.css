@@ -1,0 +1,197 @@
+.banner-content {
+    height: 100vh;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-img {
+    height: 100%;
+}
+
+.banner-img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/assets/img/linerlabel_light.png") center / cover no-repeat;
+    height: calc(100vw * 100 / 2000);
+}
+
+img.banner-img_img {
+    height: 100%;
+}
+
+.banner-hero,
+.banner-skin {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.liner-line {
+    width: 30%;
+    height: 2.25rem;
+    bottom: 5%;
+    background: url(https://globalhok.wordpress.com/wp-content/uploads/2024/08/linebox.png) 0 0 / 100% 100% no-repeat;
+    filter: drop-shadow(1px 1px 1px black) brightness(1.5);
+    -webkit-animation: liner_line 2.15s linear infinite both;
+    animation: liner_line 2.15s linear infinite both;
+}
+
+@keyframes liner_line {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    12% {
+        transform: translate(-50%, 7px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 25px);
+        opacity: 0;
+    }
+}
+
+.hero-display {
+    height: 100%;
+}
+
+.title_img {
+    height: 12%;
+    margin: 65px auto 0 auto;
+    filter: hue-rotate(267deg);
+}
+
+.icon-role {
+    background: url(https://globalhok.wordpress.com/wp-content/uploads/2024/08/main-btn.png) no-repeat;
+    height: 50px;
+    width: 100%;
+    background-size: 800%;
+    filter: grayscale(1) hue-rotate(304deg);
+    transition: 0.35s ease-in-out;
+}
+
+#role-tank {
+    background-position: -2px -69px;
+}
+
+#role-fighter {
+    background-position: -54px -73px;
+    background-size: 1000%;
+}
+
+#role-assassin {
+    background-position: -99px -71px;
+}
+
+#role-mage {
+    background-position: -161px -76px;
+}
+
+#role-marksmen {
+    background-position: -214px -75px;
+}
+
+#role-support {
+    background-position: -239px -63px;
+}
+
+.role-name {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.role-name-en {
+    font-size: 10px;
+}
+
+.role-name-vi {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.role-box {
+    justify-content: center;
+    margin: 1.25rem 0;
+    z-index: 5;
+}
+
+.role-lane {
+    margin: 0 1rem;
+}
+
+
+.active-role .icon-role {
+    filter: grayscale(0) hue-rotate(304deg) !important;
+    transform: translate(0, -10px);
+}
+
+.role-lane:hover .icon-role {
+    filter: grayscale(0) hue-rotate(304deg);
+}
+
+.preview-hero {
+    margin: 0 auto;
+    height: 55%;
+}
+
+img.preview-hero_img {
+    z-index: 2;
+}
+
+.rt_c {
+    -webkit-animation: rotating_circle 12s linear infinite both;
+    animation: rotating_circle 12s linear infinite both;
+}
+
+#border-hero-bot {
+    z-index: 1;
+}
+
+#border-hero-top {
+    z-index: 3;
+}
+
+@keyframes rotating_circle {
+    0% {
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}
+
+.hide-img-homepage {
+    -webkit-animation: hideImageHomepage 0.75s ease-in-out both;
+    animation: hideImageHomepage 0.75s ease-in-out both;
+}
+
+@keyframes hideImageHomepage {
+    0% {
+        clip-path: circle(100% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+
+.display-img-homepage {
+    -webkit-animation: displayImageHomepage 1.2s ease-in-out 0.75s both;
+    animation: displayImageHomepage 1.2s ease-in-out 0.75s both;
+}
+
+@keyframes displayImageHomepage {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+}

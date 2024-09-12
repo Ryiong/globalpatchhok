@@ -1,0 +1,169 @@
+.header-content {
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #d5d5d5;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 2;
+    background: #fff;
+}
+
+.header-logo_img {
+    height: 60%;
+    margin-top: calc((60px - 60px*0.6)/2);
+}
+
+li.header-menu_item>span {
+    line-height: 65px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+li.header-menu_item>span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: calc(100px * 100 / 348);
+    background: url("https://globalhok.wordpress.com/wp-content/uploads/2024/09/line_header_animation.png") no-repeat;
+    background-size: 700%;
+    background-position: 0px 0px;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+li.header-menu_item:hover>span::after {
+    -webkit-animation: hover_header 1s steps(1) both;
+    animation: hover_header 1s steps(1) both;
+}
+
+@keyframes hover_header {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    5% {
+        background-position: -100px 0px;
+    }
+
+    10% {
+        background-position: -200px 0px;
+    }
+
+    15% {
+        background-position: -300px 0px;
+    }
+
+    20% {
+        background-position: -400px 0px;
+    }
+
+    25% {
+        background-position: -500px 0px;
+    }
+
+    30% {
+        background-position: -600px 0px;
+    }
+
+    35% {
+        background-position: 0px -28.73563218px;
+    }
+
+    40% {
+        background-position: -100px -28.73563218px;
+    }
+
+    45% {
+        background-position: -200px -28.73563218px;
+    }
+
+    50% {
+        background-position: -300px -28.73563218px;
+    }
+
+    55% {
+        background-position: -400px -28.73563218px;
+    }
+
+    60% {
+        background-position: -500px -28.73563218px;
+    }
+
+    65% {
+        background-position: -600px -28.73563218px;
+    }
+
+    70% {
+        background-position: 0px -57.47126437px;
+    }
+
+    75% {
+        background-position: -100px -57.47126437px;
+    }
+
+    80% {
+        background-position: -200px -57.47126437px;
+    }
+
+    85% {
+        background-position: -300px -57.47126437px;
+    }
+
+    90% {
+        background-position: -400px -57.47126437px;
+    }
+
+    95% {
+        background-position: -500px -57.47126437px;
+    }
+
+    100% {
+        background-position: -600px -57.47126437px;
+    }
+}
+
+li.header-menu_item {
+    margin: 0 1.75rem;
+}
+
+ul.menu-mini_list {
+    padding: 0.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ececec;
+    width: 180px;
+    display: none;
+    transition: 0.75s ease;
+    z-index: 2;
+}
+
+li.header-menu_item:hover>ul.menu-mini_list {
+    display: block;
+}
+
+li.menu-mini_item {
+    padding: 0.75rem 0;
+}
+
+li.menu-mini_item span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    border-radius: 50px;
+    background-color: #F1F8E8;
+    transition: 0.75s linear;
+}
+
+li.menu-mini_item:hover span::after {
+    width: 100%;
+}

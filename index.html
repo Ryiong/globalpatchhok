@@ -4,243 +4,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/style/normalize.css">
+  <meta name="author" content="Ryiong">
+  <meta name="description"
+    content="Vương Giả Vinh Diệu là một trò chơi moba trên di động cạnh do Tencent TiMi Studio phát hành, không phải một người là vương giả mà đó là vinh quang của cả đội! Trận chiến PVP 5v5 Kings Canyon, trải nghiệm cảm giác phấn khích khi thi đấu với các anh hùng! Các chế độ trò chơi phong phú đang chờ bạn tham gia và trải nghiệm sự đột phá truyền thống cũng như các hình thức thi đấu anh hùng mới!">
+  <meta http-equiv=”content-language” content=”vi” />
+  <title>Remake UI Web</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://www.blogger.com/static/v1/widgets/3566091532-css_bundle_v2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Bricolage+Grotesque">
   <link rel="stylesheet" href="./assets/style/base.css">
-  <link rel="stylesheet" href="./assets/style/main.css">
-  <link rel="stylesheet" href="./assets/style/blogger.css">
-  <link rel="stylesheet" href="./assets/style/animation.css">
-  <link rel="stylesheet" href="./assets/style/responsive.css">
+  <link rel="stylesheet" href="./assets/style/header.css">
+  <link rel="stylesheet" href="./assets/style/banner.css">
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="header-box">
-    <div class="logo-page">
-      <a href="" class="link-page">
-        <img src="https://vgvdpatchglobal.files.wordpress.com/2023/11/honor_of_kings_logo.webp"
-          alt="Vương Giả Vinh Diệu Patch Global" title="Vương Giả Vinh Diệu Patch Global" class="logo-page-img" />
-      </a>
-    </div>
-    <div class="menu-page">
-      <div class="menu-lag">
-        <ul class="big-menu">
-          <li><a href="" class="link-menu">thông tin<i class="fa-solid fa-chevron-down"></i></a>
-            <div class="sub-nav">
-              <ul class="sub-nav-inner">
-                <li class="down-nav">
-                  <a href="" target="_blank" title="">cài đặt<i class="fa-solid fa-up-right-from-square"></i></a>
-                  <a href="" target="_blank" title="">hệ thống anh hùng<i
-                      class="fa-solid fa-up-right-from-square"></i></a>
-                  <a href="" target="_blank" title="">lược đồ trang bị<i
-                      class="fa-solid fa-up-right-from-square"></i></a>
-                  <a href="" target="_blank" title="">túi ngọc<i class="fa-solid fa-up-right-from-square"></i></a>
-                  <a href="" target="_blank" title="">bảng bổ trợ<i class="fa-solid fa-up-right-from-square"></i></a>
-                  <a href="" target="_blank" title="">hạp cốc vương giả<i
-                      class="fa-solid fa-up-right-from-square"></i></a>
+  <div class="header-full">
+    <div class="header-box section" id="header">
+      <div class="widget HTML" data-version="1" id="HTML1">
+        <div class="widget-content">
+          <div class="header-content flex">
+            <div class="logo-page h-100">
+              <a onclick="window.open('https://globalhok.blogspot.com/')" class="header-logo_link h-100">
+                <img src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/honor_of_kings_logo.webp"
+                  alt="Logo page" class="header-logo_img">
+              </a>
+            </div>
+            <div class="header-menu">
+              <ul class="header-menu_list flex">
+                <li class="header-menu_item relative">
+                  <span class="cur-point block relative">Dữ liệu</span>
+                  <ul class="menu-mini_list center-absolute">
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://globalhok.blogspot.com/p/herolist.html', '_blank')"
+                        class="menu-item_link">
+                        <span class="relative">Anh hùng</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://globalhok.blogspot.com/p/itemlist.html', '_blank')"
+                        class="menu-item_link">
+                        <span class="relative">Trang bị</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a onclick="window.open('#', '_blank')" class="menu-item_link">
+                        <span class="relative">Túi ngọc</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://globalhok.blogspot.com/p/summoner.html', '_blank')"
+                        class="menu-item_link"></a>
+                      <span class="relative">Bổ trợ</span>
+                      </a>
+                    </li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://globalhok.blogspot.com/p/seasonlist.html', '_blank')"
+                        class="menu-item_link"></a>
+                      <span class="relative">Mùa giải</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header-menu_item relative">
+                  <span class="cur-point block relative">Esport</span>
+                  <ul class="menu-mini_list center-absolute">
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://esportvgvd.blogspot.com/2024/07/HoK-MSIxEWC.html', '_blank')"
+                        class="menu-item_link">
+                        <span class="relative">Invitational</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a onclick="window.open('#', '_blank')" class="menu-item_link">
+                        <span class="relative">Championship</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://esportvgvd.blogspot.com/', '_blank')" class="menu-item_link">
+                        <span class="relative">Dữ liệu thi đấu</span>
+                      </a></li>
+                  </ul>
+                </li>
+                <li class="header-menu_item relative">
+                  <span class="cur-point block relative">Khám phá</span>
+                  <ul class="menu-mini_list center-absolute">
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://worldvgvd.blogspot.com/', '_blank')" class="menu-item_link">
+                        <span class="relative">Trạm quan sát</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://worldvgvd.blogspot.com/2024/07/honor-of-kings-big-event.html', '_blank')"
+                        class="menu-item_link">
+                        <span class="relative">Sự kiện lớn</span>
+                      </a></li>
+                    <li class="menu-mini_item cur-point"><a
+                        onclick="window.open('https://worldvgvd.blogspot.com/p/artstore.html', '_blank')"
+                        class="menu-item_link">
+                        <span class="relative">Bảo tàng nghệ thuật</span>
+                      </a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
-          </li>
-          <li><a href="" class="link-menu">esports<i class="fa-solid fa-up-right-from-square"></i></a></li>
-          <li><a href="" class="link-menu">trạm quan sát<i class="fa-solid fa-up-right-from-square"></i></a></li>
-          <li><a href="" class="link-menu">khám phá<i class="fa-solid fa-up-right-from-square"></i></a></li>
-          <li><a href="" class="link-menu">tải xuống</a></li>
-        </ul>
-      </div>
-      <div class="mobile-menu">
-        <a href="#" onclick="displayMenu()" id="open-menu" class="icon-mobile link-menu"><i
-            class="fa-solid fa-bars"></i></a>
-        <a href="#" onclick="hideMenu()" id="close-menu" class="icon-mobile link-menu hide"><i
-            class="fa-solid fa-xmark"></i></a>
-        <div class="mobile-down-nav">
-          <a href="">hạp cốc vương giả</a>
-          <a href="">hệ thống anh hùng</a>
-          <a href="">lược đồ trang bị</a>
-          <a href="">túi ngọc</a>
-          <a href="">bảng bổ trợ</a>
-          <a href="">esport</a>
-          <a href="">trạm quan sát</a>
-          <a href="">khám phá</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Header -->
-  <!-- Banner silder -->
-  <div class="banner-box">
-    <div class="banner-box">
-      <div class="linebox lbi"></div>
-      <div class="music-play" id="js-music-play">
-        <a href="javascript:;" id="btn-music" class="btn-music sp hv off"></a>
-        <img src="https://vgvdpatchglobal.files.wordpress.com/2023/11/musicplay.gif" alt="" class="mspa hide"
-          id="JS-mspa">
-      </div>
-      <div class="banner-video">
-        <div class="background-box"></div>
-        <video muted preload="auto" autoplay loop id="js-main-clip" src="assets/vid/lobbybanner.mp4"
-          class="main-clip"></video>
+  <div class="banner-full">
+    <div class="banner-box section" id="banner">
+      <div class="widget HTML" id="HTML2" data-version="1">
+        <div class="widget-content">
+          <div class="banner-content">
+            <div class="banner-img relative">
+              <img src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/banner-global.jpg" alt="Banner_IMG"
+                class="banner-img_img center-absolute">
+              <div class="liner-line center-absolute"></div>
+            </div>
+            <div class="banner-hero ">
+              <div class="hero-display relative">
+                <img src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/hok-title-0.png" alt="Title 1"
+                  class="title_img">
+                <div class="role-box relative flex">
+                  <div class="role-lane active-role cur-point">
+                    <em class="icon-role block" id="role-tank"></em>
+                    <span class="role-name block role-name-vi">ĐỠ ĐÒN</span>
+                    <span class="role-name block role-name-en">Tank</span>
+                  </div>
+                  <div class="role-lane cur-point">
+                    <em class="icon-role block" id="role-fighter"></em>
+                    <span class="role-name block role-name-vi">ĐẤU SĨ</span>
+                    <span class="role-name block role-name-en">Fighter</span>
+                  </div>
+                  <div class="role-lane cur-point">
+                    <em class="icon-role block" id="role-assassin"></em>
+                    <span class="role-name block role-name-vi">SÁT THỦ</span>
+                    <span class="role-name block role-name-en">Assassin</span>
+                  </div>
+                  <div class="role-lane cur-point">
+                    <em class="icon-role block" id="role-mage"></em>
+                    <span class="role-name block role-name-vi">PHÁP SƯ</span>
+                    <span class="role-name block role-name-en">Mage</span>
+                  </div>
+                  <div class="role-lane cur-point">
+                    <em class="icon-role block" id="role-marksmen"></em>
+                    <span class="role-name block role-name-vi">XẠ THỦ</span>
+                    <span class="role-name block role-name-en">Marksmen</span>
+                  </div>
+                  <div class="role-lane cur-point">
+                    <em class="icon-role block" id="role-support"></em>
+                    <span class="role-name block role-name-vi">HỖ TRỢ</span>
+                    <span class="role-name block role-name-en">Supports</span>
+                  </div>
+                </div>
+                <div class="preview-hero block relative">
+                  <img id="border-hero-bot" class="h-100 center-absolute preview-hero_img rt_c"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/border_hero_bot.png"
+                    alt="Border-bottom">
+                  <img id="border-hero-top" class="h-100 center-absolute preview-hero_img rt_c"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/border_hero_top.png"
+                    alt="Border-top">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg0.png" alt="Hero">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg1.png" alt="Hero">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg2.png" alt="Hero">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg3.png" alt="Hero">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg4.png" alt="Hero">
+                  <img class="homepage-img_banner hide-img-homepage h-100 center-absolute preview-hero_img"
+                    src="https://globalhok.wordpress.com/wp-content/uploads/2024/08/heroimg5.png" alt="Hero">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- End Banner -->
-  <!-- Center Box -->
-  <div class="center-box">
-    <div class="centerbig-events">
-      <a class="cevent pe1" title="Hệ thống mùa giải" href="#"><img class="imgevent"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-big-1.png" alt=""></a>
-      <a class="cevent pe2" title="Quy tắc xử phạt" href="#"><img class="imgevent"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-big-2.png" alt=""></a>
-      <a class="cevent pe3" title="Hợp tác và văn hóa" href="#"><img class="imgevent"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-big-3.png" alt=""></a>
-      <a class="cevent pe4" title="Giải đấu quốc tế" href="#"><img class="imgevent"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-big-4.png" alt=""></a>
-    </div>
-    <div class="centermobile-events">
-      <a class="cevent-mobile pem1" title="Hệ thống mùa giải" href="#"><img class="imgevent-mobile"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-mobile-1.png" alt=""></a>
-      <a class="cevent-mobile pem2" title="Quy tắc xử phạt" href="#"><img class="imgevent-mobile"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-mobile-2.png" alt=""></a>
-      <a class="cevent-mobile pem3" title="Hợp tác và văn hóa" href="#"><img class="imgevent-mobile"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-mobile-3.png" alt=""></a>
-      <a class="cevent-mobile pem4" title="Giải đấu quốc tế" href="#"><img class="imgevent-mobile"
-          src="https://vgvdpatchglobal.files.wordpress.com/2024/01/center-mobile-4.png" alt=""></a>
-    </div>
-  </div>
-  <!-- Center End -->
-  <!-- Content -->
-  <div class="container-box uppost">
-    <div class="content-box">
-      <div class="main-post bw">
-        <!-- Post -->
-        <div class="">
-          <img src="https://vgvdpatchglobal.files.wordpress.com/2024/01/hok-title-0.png" alt="anh hùng nổi bật"
-            class="tlhomepage" />
+  <div class="container-full">
+    <div class="container-box section" id="container">
+      <div class="widget HTML" id="HTML2" data-version="1">
+        <div class="widget-content">
 
         </div>
-        <div class="more-post">
-          <a href="https://vgvdpatchglobal.blogspot.com/p/news.html" class="link-more-post lmp"><span>Thêm</span></a>
-        </div>
-      </div>
-      <div class="side-box bw">
-        <div class="side-content">
-          <h4 class="title-side">Trang phục mới</h4>
-          <div class="content-lastest">
-            <div class="big-content lastest-contentbox">
-              <img src="" alt="" class="thumb-content-lastest">
-              <i></i>
-              <p class="title-content-lastest"></p>
-            </div>
-            <div class="small-contents">
-              <div class="small-content lastest-contentbox">
-                <img src="" alt="" class="thumb-content-lastest">
-                <i></i>
-                <p class="title-content-lastest"></p>
-              </div>
-              <div class="small-content lastest-contentbox">
-                <img src="" alt="" class="thumb-content-lastest">
-                <i></i>
-                <p class="title-content-lastest"></p>
-              </div>
-              <div class="small-content lastest-contentbox">
-                <img src="" alt="" class="thumb-content-lastest">
-                <i></i>
-                <p class="title-content-lastest"></p>
-              </div>
-              <div class="small-content lastest-contentbox">
-                <img src="" alt="" class="thumb-content-lastest">
-                <i></i>
-                <p class="title-content-lastest"></p>
-              </div>
-            </div>
-          </div>
-          <h4 class="title-side">Trận đấu trong ngày</h4>
-          <p class="none-data" style="text-align: center; margin-bottom: 1.25rem;">Không có dữ liệu<br>Hiện chỉ hỗ trợ
-            giải đấu cấp S</p>
-        </div>
       </div>
     </div>
   </div>
-  <!-- Content End -->
-  <div class="footer-box">
-    <div class="footer-box">
-      <div class="network-dis">
-        <div class="road-map">
-          <img src="https://vgvdpatchglobal.files.wordpress.com/2024/01/hokmap.png" alt="kings rift"
-            class="mapimg mtfp mlfp" />
-        </div>
-        <div class="networks mtfp">
-          <div class="social-nets">
-            <a href="https://www.facebook.com/hokvietnam" class="social">
-              <i class="fa-brands fa-facebook isocial"></i>
-              <span class="tsocial">HOKVN</span>
-            </a>
-            <a href="https://www.facebook.com/hokesportvn" class="social">
-              <i class="fa-brands fa-facebook isocial"></i>
-              <span class="tsocial">HOKEVN</span>
-            </a>
-          </div>
-          <div class="social-nets">
-            <a href="https://www.vuonggiavinhdieu.com/" target="blank" class="social">
-              <i class="fa-solid fa-cloud isocial"></i>
-              <span class="tsocial">PATCH TRUNG</span>
-            </a>
-            <a href="#" title="Chưa có dev ra má ơi" class="social hide">
-              <i class="fa-solid fa-cart-shopping isocial"></i>
-              <span class="tsocial">CỬA HÀNG</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="linef"></div>
-      <div class="content-footer">
-        <div class="webmean">
-          <p class="para-web">Toàn bộ câu chuyện bối cảnh của Vương Giả Vinh Diệu diễn ra trong thế giới hư cấu Vương
-            Giả
-            Đại Lục. Các nhân vật, vị trí địa lý và sự kiện liên quan đều là những sáng tạo nghệ thuật chứ không phải
-            lịch
-            sử chính thức.</p>
-        </div>
-        <div class="downfooter">
-          <p class="titledown">Tải xuống ngay</p>
-          <div class="icondown">
-            <div class="downbox"><a
-                href="https://play.google.com/store/apps/details?id=com.levelinfinite.sgameGlobal&pid=MKT&af_click_lookback=30d&c=HOK-global-AOS&af_adset=OfficialWebsite"
-                target="blank" class="linkdown"><img
-                  src="https://vgvdpatchglobal.files.wordpress.com/2024/01/google_pay.png" alt="google play"
-                  class="idown" /></a></div>
-            <div class="downbox"><a
-                href="https://hokglobal.onelink.me/Sl6q?pid=MKT&af_click_lookback=30d&c=HOK-global-AOS&af_adset=OfficialWebsite&af_ad=&af_r="
-                target="blank" class="linkdown"><img
-                  src="https://vgvdpatchglobal.files.wordpress.com/2024/01/apple_store.png" alt="apple store"
-                  class="idown" /></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="webcopyright"><span class="webauthor">© 2023 Ryiong</span></div>
-    </div>
-  </div>
-  <div class="support-box">
-    <div class="donate-box">
-      <img src="https://vgvdpatchglobal.wordpress.com/wp-content/uploads/2024/07/supportryiongicon.png"
-        alt="Donate for Ryiong">
-      <div class="close-donate"><span>X</span></div>
-    </div>
-  </div>
-  <script>
-    document.querySelector(".close-donate").addEventListener('click', () => {
-      document.querySelector(".support-box").style.transform = "translateX(122%)"
-      setTimeout(() => { document.querySelector(".support-box").style.display = "none" }, 2000)
-    })
-  </script>
-  <!-- Logic -->
-  <script src="./assets/js/logic.js"></script>
-  <script src="https://kit.fontawesome.com/378ad49b02.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/js/scroll-snap.js"></script>
+  <script type="text/javascript" src="./assets/js/banner-hero.js"></script>
+
 </body>
 
 </html>
