@@ -166,6 +166,7 @@ a.link-more-post {
 
 .lmp {
     animation: linnerMorePost 2s both infinite steps(1);
+    -webkit-animation: linnerMorePost 2s both infinite steps(1);
 }
 
 /* New Skin */
@@ -191,6 +192,25 @@ a.link-more-post {
 .swiper-slide-content {
     width: 100%;
     height: 100%;
+}
+
+@keyframes loadingNewSkin {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.25);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.loading-newskin_homepage {
+    animation: loadingNewSkin 1.25s both infinite ease-in-out;
+    -webkit-animation: loadingNewSkin 1.25s both infinite ease-in-out;
 }
 
 .swiper-slide-content i {

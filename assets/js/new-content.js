@@ -2,6 +2,10 @@ const newPosts = document.querySelectorAll('.news-homepage');
 const newPostsTitle = document.querySelectorAll('.news-homepage .news-homepage_title');
 const newPostsDate = document.querySelectorAll('.news-homepage .news-homepage_date');
 
+const swiperContentLastest = document.querySelectorAll(".swiper-slide-content.relative.loading-newskin_homepage")
+const tagSkinLastest = document.querySelectorAll(".swiper-slide-content i")
+const thumbContentLastest = document.querySelectorAll(".swiper-slide-content img")
+const titleContentLastest = document.querySelectorAll(".swiper-slide-content p")
 // Get data
 fetch('https://script.google.com/macros/s/AKfycbz-V3Acodgu-QF-4qYy0Vsp3GfrGKIAUho6SujvtcQMwlLBIS0AV1FVIwG4IVKkukAi/exec')
     .then(response => {
@@ -20,6 +24,9 @@ fetch('https://script.google.com/macros/s/AKfycbz-V3Acodgu-QF-4qYy0Vsp3GfrGKIAUh
         })
         tagSkinLastest.forEach((item, index) => {
             item.style.background = "url('" + data.data[index].tagSkin + "') 0 0 /100% 100% no-repeat"
+        })
+        swiperContentLastest.forEach((item) => {
+            item.classList.remove('loading-newskin_homepage')
         })
         console.log(data);
     })

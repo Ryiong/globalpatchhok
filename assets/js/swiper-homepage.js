@@ -11,7 +11,3 @@ const swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper_btn_prer',
     },
 })
-
-const tagSkinLastest = document.querySelectorAll(".swiper-slide-content i")
-const thumbContentLastest = document.querySelectorAll(".swiper-slide-content img")
-const titleContentLastest = document.querySelectorAll(".swiper-slide-content p")
