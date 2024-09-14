@@ -6,21 +6,25 @@ const roleLanes = document.querySelectorAll(".role-lane")
 const homepageImgBanners = document.querySelectorAll(".homepage-img_banner")
 // Loop icon
 setInterval(() => {
-    openImage = true
     for (let roleLane of roleLanes) {
         roleLane.classList.remove('active-role')
     }
-    indexImage = indexImage + 1 > 5 ? 0 : indexImage + 1
+    if (openImage) {
+        setTimeout(() => {
+            openImage = false
+            indexImage = indexImage + 1 > 5 ? 0 : indexImage + 1
+        }, timedelay)
+    } else {
+        indexImage = indexImage + 1 > 5 ? 0 : indexImage + 1
+    }
     roleLanes[indexImage].classList.add('active-role')
     openImgBanner(indexImage)
-    setTimeout(() => {
-        openImage = false
-    }, timedelay)
+
 }, timedelay)
 
 // Click icon
 for (let [index, roleLane] of roleLanes.entries()) {
-    roleLane.addEventListener('click', (event) => {
+    roleLane.addEventListener('click', () => {
         openImage = true
         for (let roleLane of roleLanes) {
             roleLane.classList.remove('active-role')
@@ -28,9 +32,6 @@ for (let [index, roleLane] of roleLanes.entries()) {
         roleLane.classList.add('active-role')
         indexImage = index
         openImgBanner(indexImage)
-        setTimeout(() => {
-            openImage = false
-        }, timedelay)
     })
 }
 

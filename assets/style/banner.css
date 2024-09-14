@@ -1,3 +1,4 @@
+/* Main Banner */
 .banner-content {
     height: 100vh;
     transition: 0.5s ease-in-out;
@@ -53,6 +54,204 @@ img.banner-img_img {
         transform: translate(-50%, 25px);
         opacity: 0;
     }
+}
+
+.banner-home_content {
+    bottom: 10%;
+}
+
+.new-content_item {
+    margin: 0 1rem;
+}
+
+/* Download Banner */
+
+/* News */
+#news {
+    width: 35rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+a.news-homepage {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.65rem 0;
+}
+
+span.news-homepage_title {
+    width: 85%;
+    overflow: hidden;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-indent: 0.85rem;
+}
+
+span.news-homepage_date {
+    width: 15%;
+    text-align: center;
+}
+
+.more-post {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+a.link-more-post {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url(https://globalhok.wordpress.com/wp-content/uploads/2024/08/more-btn.png) center no-repeat;
+    background-size: 600%;
+    background-position: 0px 0px;
+    width: 100px;
+    height: calc(100px*(51 / 229));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+@keyframes linnerMorePost {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    9.09% {
+        background-position: -100px 0px;
+    }
+
+    18.18% {
+        background-position: -200px 0px;
+    }
+
+    27.27% {
+        background-position: -300px 0px;
+    }
+
+    36.36% {
+        background-position: -400px 0px;
+    }
+
+    45.45% {
+        background-position: -500px 0px;
+    }
+
+    54.54% {
+        background-position: 0px -22.22px;
+    }
+
+    63.63% {
+        background-position: -100px -22.22px;
+    }
+
+    72.72% {
+        background-position: -200px -22.22px;
+    }
+
+    81.81% {
+        background-position: -300px -22.22px;
+    }
+
+    90.90% {
+        background-position: -400px -22.22px;
+    }
+
+    100.0% {
+        background-position: -500px -22.22px;
+    }
+}
+
+.lmp {
+    animation: linnerMorePost 2s both infinite steps(1);
+}
+
+/* New Skin */
+#banner-swiper1 {
+    overflow: hidden;
+    width: 25rem;
+    aspect-ratio: 1920 / 882;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-container img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.swiper-slide-content {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide-content i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: calc(1.25rem* 120 / 38);
+    height: 1.25rem;
+    transition: all 0.3s ease 0.3s;
+}
+
+.swiper-slide-content p {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.7rem;
+    background: #ccccccdb;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0.25rem;
+    transition: all 0.3s ease;
+    margin: auto;
+    transform: translate(0, 110%);
+    color: #000 !important;
+}
+
+.swiper-slide-content:hover p {
+    transform: translate(0, 0);
+}
+
+.swiper_btn {
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translate(0, -50%);
+    transition: 0.25s ease-in;
+    filter: drop-shadow(1px 1px 6px #353535);
+    cursor: pointer;
+}
+
+.swiper_btn_prer {
+    left: 0.5rem;
+    background: url("https://esportvgvd.wordpress.com/wp-content/uploads/2024/07/go-left.png") 0 0 /100% 100% no-repeat;
+}
+
+.swiper_btn_next {
+    right: 0.5rem;
+    background: url("https://esportvgvd.wordpress.com/wp-content/uploads/2024/07/go-right.png") 0 0 /100% 100% no-repeat;
+}
+
+.swiper_btn:hover {
+    transform: scale(0.93) translate(0, -50%);
+}
+
+/* Hero Popular */
+
+.banner-hero {
+    background: url("/assets/img/bg_1.jpg") center / cover no-repeat;
 }
 
 .hero-display {
