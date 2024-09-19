@@ -9,7 +9,7 @@
 .preview-post {
     width: 1920px;
     aspect-ratio: 16/9;
-    background: url("/assets/img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
+    background: url("//assets/img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
     overflow: hidden;
 }
 
@@ -97,7 +97,7 @@
 .preicon_data {
     width: 120px;
     height: 120px;
-    background: url("/assets/img/TemplatePost/54000.png") 0 0 / 100% 100% no-repeat;
+    background: url("//assets/img/TemplatePost/54000.png") 0 0 / 100% 100% no-repeat;
 }
 
 .preicon_data:before {
@@ -120,7 +120,7 @@
     width: 102%;
     height: 102%;
     z-index: 1;
-    background: url("/assets/img/TemplatePost/BorderSkill.png") 0 0 / 100% 100% no-repeat;
+    background: url("//assets/img/TemplatePost/BorderSkill.png") 0 0 / 100% 100% no-repeat;
 }
 
 .title_preicon {
