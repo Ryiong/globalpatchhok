@@ -1,0 +1,146 @@
+.setting-content {
+    margin: 2rem 1.25rem;
+}
+
+.setting-content select#heros {
+    width: 8rem;
+}
+
+.preview-post {
+    width: 1920px;
+    aspect-ratio: 16/9;
+    background: url("/assets/img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
+    overflow: hidden;
+}
+
+.hero-adjust {
+    bottom: 0;
+    right: -18%;
+    height: 90%;
+}
+
+.hero-adjust img {
+    height: 100%;
+}
+
+.hero-adjust>em {
+    top: 70%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.5rem;
+    filter: drop-shadow(1px 1px 9px black);
+    text-transform: uppercase;
+}
+
+.hero-adjust>em:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    width: 120%;
+    height: 4.5px;
+    border-radius: 50px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.footer-prepost {
+    height: 70px;
+    background-color: #2e4f4f;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.logos-post {
+    align-items: center;
+    margin-left: 2.5rem;
+}
+
+.line-footer_btw {
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: #cbe4de;
+    margin: 0 1rem;
+}
+
+.footer_mini-title span {
+    text-align: right;
+    font-size: 27px;
+    color: #fff;
+    line-height: 70px;
+}
+
+.mini-title_content {
+    margin-right: 2.5rem;
+}
+
+.prepost_adjcontent {
+    margin-top: 2.5rem;
+}
+
+.prepost_content {
+    width: 75%;
+    height: 87%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 3.5rem;
+}
+
+.prepost_icon {
+    align-items: center;
+}
+
+.preicon_data {
+    width: 120px;
+    height: 120px;
+    background: url("/assets/img/TemplatePost/54000.png") 0 0 / 100% 100% no-repeat;
+}
+
+.preicon_data:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -28px;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    background: linear-gradient(0deg, #af8453, #cbaa79);
+}
+
+.preicon_data::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    width: 102%;
+    height: 102%;
+    z-index: 1;
+    background: url("/assets/img/TemplatePost/BorderSkill.png") 0 0 / 100% 100% no-repeat;
+}
+
+.title_preicon {
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    color: #b58c5c;
+    padding: 1rem 5.75rem;
+    margin-left: 1rem;
+    background: linear-gradient(0deg, #1f2730, #2f3939);
+    border: 1px solid #af8453;
+}
+
+.prepost_data p {
+    color: #fff;
+    font-size: 26px;
+    width: 80%;
+    filter: drop-shadow(2px 4px 2px black);
+}
+
+.prepost_data {
+    margin-top: 1.75rem;
+}
