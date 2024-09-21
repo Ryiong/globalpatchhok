@@ -20,15 +20,45 @@
 
 <body>
     <div class="setting-content">
-        <form id="hero-form">
-            <label>Chọn anh hùng</label>
-            <select onchange="getSelectedValue()" id="heroes" name="heroes">
+        <form class="data-input-form" id="version-form">
+            <label>Chọn phiên bản</label>
+            <select onchange="getVersionValue(this.id)" id="versions" name="versions">
+                <option value="ver">Version</option>
+                <option value="cn">王者荣耀</option>
+                <option value="gl">HoK</option>
             </select>
+        </form>
+        <form class="data-input-form" id="input-footer">
+            <label for="miniFooter">Tiêu đề chân trang:</label>
+            <input class="input-text" type="text" id="miniFooter" name="miniFooter">
+            <button class="mtb-075rem" onclick="fillData()" type="button" style="margin-top: 1rem;"> Cập nhật
+                footer</button>
+        </form>
+        <form class="data-input-form" id="hero-form">
+            <label>Chọn anh hùng</label>
+            <select onchange="getHeroValue(this.id)" id="heroes" name="heroes">
+                <option value="000">Hero</option>
+            </select>
+        </form>
+        <form class="data-input-form" id="input-content">
+            <label for="iconAdj">Icon:</label>
+            <select id="iconAdj" name="iconAdj">
+                <option value="00000">Icon</option>
+            </select>
+            <label for="titleAdj">Tiêu đề hiệu chỉnh:</label>
+            <input class="input-text" type="text" id="titleAdj" name="titleAdj"></input>
+            <label for="contentAdj">Nội dung chỉnh sửa:</label>
+            <textarea class="input-text" type="text" id="contentAdj" name="contentAdj"></textarea>
+            <p>Một số custom: &lt;b&gt;Nội dung in đậm&lt;/b&gt;</p>
+            <button class="mtb-075rem" onclick="addAdj()" type="button" style="margin-top: 1rem;"> Thêm chỉnh
+                sửa</button>
+            <button class="mtb-075rem" onclick="deleteAdj()" type="button" style="margin-top: 1rem;">Xóa toàn
+                bộ</button>
         </form>
     </div>
     <div class="preview-post relative">
         <div class="hero-adjust absolute">
-            <img src="./assets/img/TemplatePost/test-hero.png" alt="Hero">
+            <img src="" alt="Hero">
             <em class="center-absolute">
                 <span>NAME TEST HERO</span>
             </em>
@@ -38,33 +68,11 @@
                 <img src="./assets/img/TemplatePost/logo-HEV.png" alt="Logo HEV">
             </div>
             <div class="footer_mini-title">
-                <span class="version-footer">[王者荣耀]</span><span class="mini-title_content">Điều chỉnh Kim Thiền -
-                    18/09/2024</span>
+                <span class="version-footer">[]</span><span class="mini-title_content">Tiêu đề chân trang</span>
             </div>
         </div>
         <div class="prepost_content absolute">
-            <div class="prepost_adjcontent">
-                <div class="prepost_icon flex">
-                    <div class="preicon_data relative"></div>
-                    <span class="title_preicon">Nội tại</span>
-                </div>
-                <div class="prepost_data">
-                    <p>Chỉnh sửa: Cẩm Lan Bảo Y bảo hộ Kim Thiền, mỗi 60~48s khiến Kim Thiền miễn nhiễm lại hiệu ứng
-                        khống chế. Kim Thiền nhận được 1 lớp ấn mỗi 2~1s, giúp giảm sát thương phải chịu đi 30~60 với
-                        mỗi lần tiêu hao stack ấn.</p>
-                </div>
-            </div>
-            <div class="prepost_adjcontent">
-                <div class="prepost_icon flex">
-                    <div class="preicon_data relative"></div>
-                    <span class="title_preicon">Nội tại</span>
-                </div>
-                <div class="prepost_data">
-                    <p>Chỉnh sửa: Cẩm Lan Bảo Y bảo hộ Kim Thiền, mỗi 60~48s khiến Kim Thiền miễn nhiễm lại hiệu ứng
-                        khống chế. Kim Thiền nhận được 1 lớp ấn mỗi 2~1s, giúp giảm sát thương phải chịu đi 30~60 với
-                        mỗi lần tiêu hao stack ấn.</p>
-                </div>
-            </div>
+
         </div>
     </div>
     <script src="./assets/js/dataTemplate.js" type="text/javascript"></script>
@@ -82,32 +90,110 @@
         window.addEventListener("resize", setScale);
         window.addEventListener("load", setScale);
 
-        const listHero = document.querySelector(".setting-content select#heroes")
-        const preHeroImg = document.querySelector(".preview-post .hero-adjust img");
-        const preHeroName = document.querySelector(".preview-post .hero-adjust span");
-        const preHeroBox = document.querySelector(".preview-post .hero-adjust");
-
-
-        dataTemplate.forEach(element => {
-            let option = document.createElement('option');
-            option.text = element.heroname;
-            option.value = element.id
-            listHero.add(option)
-        });
-
-        function getSelectedValue() {
-            var form = document.getElementById("hero-form");
-            var selectedValue = form.elements["heroes"].value;
+        const listHero = document.querySelector(".setting-content select#heroes");
+        function getListHero() {
             dataTemplate.forEach(element => {
-                if (selectedValue == element.id) {
-                    preHeroName.innerText = element.heroname
-                    preHeroImg.src = element.thumb;
-                }
+                let option = document.createElement('option');
+                option.text = element.heroname;
+                option.value = element.id
+                listHero.add(option)
             });
         }
+        getListHero();
 
+        const contentAdj = document.querySelector(".prepost_content")
+        function createSkillAdj(image, title, content) {
+            let prepostAdjcontent = document.createElement('div');
+            prepostAdjcontent.classList.add("prepost_adjcontent");
+            if (image != null) {
+                prepostAdjcontent.innerHTML = '<div class="prepost_icon flex"><div class="preicon_data relative"><img src="' + image + '" class="w-100 h-100" alt="Skill"></div><span class="title_preicon">' + title + '</span></div><div class="prepost_data"><p>' + content + '</p></div>'
+            } else {
+                prepostAdjcontent.innerHTML = '<div class="prepost_icon flex"><span class="title_preicon">' + title + '</span></div><div class="prepost_data"><p>' + content + '</p></div>'
+            }
+            contentAdj.appendChild(prepostAdjcontent)
+        }
 
+        // Data Function
+        let indexHero = -1;
 
+        // Footer Preview
+        const logoFooterPre = document.querySelector(".footer-prepost .logos-post");
+        const versionFooter = document.querySelector(".footer_mini-title .version-footer");
+
+        function getVersionValue(id) {
+            let value = document.getElementById(id).value;
+            switch (value) {
+                case "cn":
+                    logoFooterPre.innerHTML += '<img src="./assets/img/TemplatePost/CN_Logo.png" alt="Logo">';
+                    versionFooter.innerText = "[王者荣耀]";
+                    break;
+                case "gl":
+                    logoFooterPre.innerHTML += '<img src="./assets/img/TemplatePost/GL_Logo.png" alt="Logo">';
+                    versionFooter.innerText = "[HoK]";
+                    break;
+                default:
+                    logoFooterPre.innerHTML = '<img src="./assets/img/TemplatePost/logo-HEV.png" alt="Logo HEV">';
+                    versionFooter.innerText = "[]";
+            }
+        }
+
+        const miniFooterInput = document.querySelector("#miniFooter")
+        const miniFooterContent = document.querySelector(".footer_mini-title .mini-title_content")
+        function fillData() {
+            miniFooterContent.innerText = miniFooterInput.value
+        }
+        // End Footer Preview
+
+        // Hero data
+        const imgHeroAdj = document.querySelector(".hero-adjust img")
+        const nameHeroAdj = document.querySelector(".hero-adjust em span")
+        const listIcon = document.querySelector(".setting-content select#iconAdj");
+
+        function getHeroValue(id) {
+            let value = document.getElementById(id).selectedIndex - 1;
+            console.log(dataTemplate[value])
+            imgHeroAdj.src = dataTemplate[value].thumb
+            nameHeroAdj.innerText = dataTemplate[value].heroname
+            dataTemplate[value].iconPath.forEach(element => {
+                let option = document.createElement('option');
+                option.text = element.slice(-element.length + 9, -4);
+                option.value = element.slice(-element.length + 9, -4);
+                option.setAttribute("data-path", element)
+                listIcon.add(option)
+                console.log(element)
+            });
+            return (indexHero = value)
+        }
+
+        // End Hero data
+        // Add Adjust in preview
+        const titleAdjInput = document.querySelector("#titleAdj")
+        const contentAdjInput = document.querySelector("#contentAdj")
+        function addAdj() {
+            console.log(listIcon.selectedIndex - 1)
+            if (listIcon.selectedIndex - 1 > -1) {
+                imgIconPre = "https://globalhok.wordpress.com/wp-content/uploads" + dataTemplate[indexHero].iconPath[listIcon.selectedIndex - 1]
+            } else {
+                imgIconPre = null
+            }
+            let titleAdjPre = titleAdjInput.value
+            let contentAdjPre = contentAdjInput.value
+            createSkillAdj(imgIconPre, titleAdjPre, contentAdjPre)
+            console.log(imgIconPre, titleAdjPre, contentAdjPre)
+        }
+        function deleteAdj() {
+            listIcon.innerHTML = '<option value="00000">Icon</option>'
+            listHero.selectedIndex = 0
+            titleAdjInput.value = ""
+            contentAdjInput.value = ""
+            miniFooterInput.value = ""
+            miniFooterContent.innerText = "Tiêu đề chân trang"
+            contentAdj.innerHTML = ""
+            imgHeroAdj.src = ""
+            nameHeroAdj.innerText = ""
+            logoFooterPre.innerHTML = '<img src="./assets/img/TemplatePost/logo-HEV.png" alt="Logo HEV">'
+            versionFooter.innerText = "[]"
+        }
     </script>
 </body>
 

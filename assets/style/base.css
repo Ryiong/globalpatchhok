@@ -54,6 +54,14 @@ img {
     display: block;
 }
 
+.mtb-075rem {
+    margin: 0.75rem 0;
+}
+
+button {
+    padding: 0.5rem;
+}
+
 
 /* Reset Blogger CSS */
 .section {

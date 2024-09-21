@@ -9,7 +9,7 @@
 .preview-post {
     width: 1920px;
     aspect-ratio: 16/9;
-    background: url("//assets/img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
+    background: url("..//img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
     overflow: hidden;
 }
 
@@ -59,6 +59,10 @@
     margin-left: 2.5rem;
 }
 
+.logos-post img {
+    margin: 0 1rem;
+}
+
 .line-footer_btw {
     display: block;
     width: 2px;
@@ -97,7 +101,6 @@
 .preicon_data {
     width: 120px;
     height: 120px;
-    background: url("//assets/img/TemplatePost/54000.png") 0 0 / 100% 100% no-repeat;
 }
 
 .preicon_data:before {
@@ -120,7 +123,7 @@
     width: 102%;
     height: 102%;
     z-index: 1;
-    background: url("//assets/img/TemplatePost/BorderSkill.png") 0 0 / 100% 100% no-repeat;
+    background: url("../img/TemplatePost/BorderSkill.png") 0 0 / 100% 100% no-repeat;
 }
 
 .title_preicon {
@@ -143,4 +146,14 @@
 
 .prepost_data {
     margin-top: 1.75rem;
+}
+
+.data-input-form {
+    margin: 1rem 0;
+}
+
+.input-text {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
 }
