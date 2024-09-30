@@ -11,6 +11,7 @@
     aspect-ratio: 16/9;
     background: url("..//img/TemplatePost/bg-tp.jpg") 0 0 / 100% 100% no-repeat;
     overflow: hidden;
+    transform-origin: top left;
 }
 
 .hero-adjust {
